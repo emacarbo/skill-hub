@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "skill-hub-mcp"
+version = "0.1.0"
+description = "MCP server for skill lifecycle management — eval, promote, sync, discover"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.2", "mypy>=1.8"]
+
+[project.scripts]
+skill-hub-mcp = "skill_hub_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/skill_hub_mcp"]

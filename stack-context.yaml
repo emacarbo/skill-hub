@@ -1,0 +1,91 @@
+# Benchmark stack context
+# These are the active projects skills are evaluated against.
+# A staged skill must be relevant to at least one of these to pass evaluation.
+
+projects:
+
+  project_pegasus:
+    path: ~/dev/project_pegasus
+    description: Yu-Gi-Oh! collection management app
+    stack:
+      - python
+      - fastapi
+      - react
+      - typescript
+      - rest-api
+      - sqlite
+
+  dqi_mitochondria:
+    path: ~/dev/dqi-mitochondria
+    description: Hudl finance dbt pipeline — contracts, AR, equity, sportscode restatement
+    stack:
+      - dbt
+      - sql
+      - redshift
+      - python
+      - data-engineering
+
+  dqi_nucleus:
+    path: ~/dev/dqi-nucleus
+    description: Core entity contracts (accounts, orgs, users) — read-only reference
+    stack:
+      - dbt
+      - sql
+      - redshift
+
+  dqi_electron:
+    path: ~/dev/dqi-electron
+    description: Financial contracts (accounting periods, FX rates, transactions) — read-only reference
+    stack:
+      - dbt
+      - sql
+      - redshift
+
+  equity_reallocation:
+    path: ~/dev/equity_reallocation
+    description: PostgreSQL treasury stock restatement calculator
+    stack:
+      - sql
+      - postgresql
+      - python
+
+  equity_reconciliation:
+    path: ~/dev/equity_reconciliation
+    description: Multi-stage SQL pipeline comparing sharework vs legacy equity systems
+    stack:
+      - sql
+      - postgresql
+      - python
+
+  project_ahre:
+    path: ~/dev/project_ahre
+    description: Python Arcade platformer game (hobby)
+    stack:
+      - python
+      - arcade
+      - game-dev
+
+  trial_balances_comparison:
+    path: ~/dev/trial_balances_comparison
+    description: Python tool comparing trial balances, variance reports, CSV processing
+    stack:
+      - python
+      - csv
+      - data-processing
+
+# Derived tag universe — a skill matching ANY of these passes the stack check
+active_tags:
+  - python
+  - fastapi
+  - react
+  - typescript
+  - dbt
+  - sql
+  - redshift
+  - postgresql
+  - rest-api
+  - data-engineering
+  - csv
+  - data-processing
+  - game-dev
+  - arcade

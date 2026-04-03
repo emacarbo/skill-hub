@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "token-savior"
+version = "0.7.1"
+description = "Compact structural codebase MCP server for token-efficient AI development"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [
+    {name = "Mibay"},
+]
+keywords = ["mcp", "codebase", "indexer", "code-navigation", "structural-analysis"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.0"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+benchmark = ["aiohttp>=3.9"]
+
+[project.scripts]
+token-savior = "token_savior.server:main_sync"
+token-savior-dashboard = "token_savior.dashboard:main"
+
+[project.urls]
+Homepage = "https://github.com/Mibayy/token-savior"
+Repository = "https://github.com/Mibayy/token-savior"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/token_savior"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = true

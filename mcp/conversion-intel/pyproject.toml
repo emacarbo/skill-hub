@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "conversion-intel"
+version = "0.1.0"
+description = "SaaS conversion intelligence MCP — track funnels, analyze cohorts, optimize conversion. Voltaire-inspired, self-hosted."
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=1.0.0",
+    "pyyaml>=6.0",
+    "httpx>=0.28.0",
+]
+
+[project.optional-dependencies]
+stripe = ["stripe>=8.0"]
+dev = ["pytest>=8.0", "ruff>=0.2", "mypy>=1.8"]
+
+[project.scripts]
+conversion-intel = "conversion_intel.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/conversion_intel"]

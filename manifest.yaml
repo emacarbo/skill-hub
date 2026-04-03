@@ -1,0 +1,4714 @@
+version: '1.0'
+updated: '2026-03-29'
+skills:
+- name: article-extractor
+  description: Extract article content from URLs
+  source: tapestry
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: productivity-learning
+- name: learn-this
+  description: Orchestrate content extraction into action plans
+  source: tapestry
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - productivity
+  - documentation
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: productivity-learning
+- name: scrum-sage
+  description: Enterprise agility coach with Scrum/Lean expertise
+  source: tapestry
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: product-management
+- name: session-log
+  description: Structured session logging for agent tracking
+  source: tapestry
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - productivity
+  - documentation
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: ship-learn-next
+  description: Transform learning into implementation action plans
+  source: tapestry
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: productivity-learning
+- name: unblock-action
+  description: Socratic method for unblocking vague tasks fast
+  source: tapestry
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: productivity-learning
+- name: youtube-transcript
+  description: Extract and transcribe YouTube video content
+  source: tapestry
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: productivity-learning
+- name: varlock
+  description: Secure environment variable management — secrets never leak into sessions
+  source: varlock-claude-skill
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - security
+  - general-dev
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: csv-data-summarizer
+  description: Automated CSV analysis with adaptive visualization
+  source: csv-data-summarizer-claude-skill
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - data-processing
+  - csv
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: data-visualization-pro
+- name: pypict
+  description: Pairwise test case design using PICT methodology
+  source: pypict-claude-skill
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: testing-qa-suite
+- name: email-html-mjml
+  description: Production-ready MJML email templates with WCAG compliance
+  source: skill-email-html-mjml
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - general-dev
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: brainstorming
+  description: Structured design workflow with hard verification gates
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - planning
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: dispatching-parallel-agents
+  description: Pattern for delegating independent tasks to parallel agents
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - agents
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: agent-engineering-pro
+- name: executing-plans
+  description: Execution framework for implementation plans with review checkpoints
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - planning
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: architecture-planning
+- name: finishing-a-development-branch
+  description: Structured process for completing development branches safely
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - git
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: git-workflow
+- name: receiving-code-review
+  description: Framework for processing code review feedback rigorously
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - code-review
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: code-review-suite
+- name: requesting-code-review
+  description: Structured code review request with subagent integration
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - code-review
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: code-review-suite
+- name: subagent-driven-development
+  description: Two-stage review pattern with fresh subagent per task
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - agents
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: agent-engineering-pro
+- name: systematic-debugging
+  description: 4-phase debugging methodology with root cause tracing before fixes
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - debugging
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: debugging-master
+- name: test-driven-development
+  description: Red-green-refactor TDD with iron laws and verification checklist
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: testing-qa-suite
+- name: using-git-worktrees
+  description: Systematic git worktree setup with safety verification
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - git
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: git-workflow
+- name: using-superpowers
+  description: Meta-skill for skill invocation order and platform adaptation
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - workflow
+  - agents
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: agent-engineering-pro
+- name: verification-before-completion
+  description: Evidence-based completion claims — no shortcuts principle
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - testing
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: writing-plans
+  description: Comprehensive plan documentation with TDD mapping
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - planning
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: architecture-planning
+- name: writing-skills
+  description: TDD-adapted skill creation with search optimization
+  source: superpowers
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - productivity
+  - documentation
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: api-designer
+  description: REST/GraphQL API design with OpenAPI spec coverage
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - rest-api
+  - api-design
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: api-design-pro
+- name: architecture-designer
+  description: System design and ADR authoring
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - planning
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: architecture-planning
+- name: cli-developer
+  description: General CLI tool development across stacks
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - backend
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: code-documenter
+  description: Documentation, OpenAPI specs, docstrings
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - documentation
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: documentation-suite
+- name: code-reviewer
+  description: PR review, code quality, security issues
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - code-review
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: code-review-suite
+- name: database-optimizer
+  description: Query optimization, index design, EXPLAIN analysis
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - sql
+  - postgresql
+  - database
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: database-pro
+- name: debugging-wizard
+  description: Error analysis, stack traces, root cause identification
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - debugging
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: debugging-master
+- name: devops-engineer
+  description: CI/CD, Docker, Kubernetes infrastructure
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - workflow
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: devops-infrastructure
+- name: django-expert
+  description: Django/DRF APIs, ORM optimization, structured backend
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - python
+  - rest-api
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: python-web-frameworks
+- name: fastapi-expert
+  description: High-performance async Python APIs with Pydantic
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - python
+  - fastapi
+  - rest-api
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: python-web-frameworks
+- name: feature-forge
+  description: Requirements gathering, user stories, EARS format specs
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - planning
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: architecture-planning
+- name: fullstack-guardian
+  description: Security-focused full-stack implementation workflow
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - rest-api
+  - backend
+  - frontend
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: game-developer
+  description: Game development — arcade, sprites, physics, game loops
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - game-dev
+  - python
+  - arcade
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  notes: 'Override: rejected by agent but game-dev is in active_tags (project_ahre)'
+- name: golang-pro
+  description: Go concurrency, goroutines, microservices
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: graphql-architect
+  description: GraphQL schema design, federation, resolvers
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - rest-api
+  - api-design
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: api-design-pro
+- name: java-architect
+  description: Spring Boot, enterprise Java, reactive patterns
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: javascript-pro
+  description: ES2023+, async/await, Node.js, vanilla JS
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - typescript
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: typescript-javascript
+- name: kubernetes-specialist
+  description: K8s manifests, Helm, GitOps, service mesh
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - backend
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: devops-infrastructure
+- name: laravel-specialist
+  description: Laravel, Eloquent ORM, API resources, queue systems
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - rest-api
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: legacy-modernizer
+  description: Strangler fig, incremental migration, refactoring patterns
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - testing
+  - git
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: mcp-developer
+  description: MCP servers/clients, protocol implementation for AI tools
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - api-design
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: microservices-architect
+  description: Service boundaries, DDD, resilience, observability patterns
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - api-design
+  - backend
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: architecture-planning
+- name: monitoring-expert
+  description: Prometheus, Grafana, structured logging, alerting
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - workflow
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: observability-monitoring
+- name: nestjs-expert
+  description: Enterprise Node.js, dependency injection, modular architecture
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - typescript
+  - rest-api
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: nextjs-developer
+  description: App Router, server components, full-stack Next.js
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - typescript
+  - react
+  - frontend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: react-development
+- name: pandas-pro
+  description: DataFrame operations, data cleaning, aggregation
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - python
+  - csv
+  - data-processing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: php-pro
+  description: Modern PHP 8.3+, strict typing, PSR standards
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: playwright-expert
+  description: E2E testing automation with Page Object Model
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: testing-qa-suite
+- name: postgres-pro
+  description: Query optimization, replication, JSONB, PG extensions
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - postgresql
+  - sql
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: database-pro
+- name: python-pro
+  description: Type-safe Python 3.11+, async patterns, testing
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - python
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: python-core
+- name: rails-expert
+  description: Rails 7+, Hotwire, Active Record, async jobs
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - backend
+  - rest-api
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: react-expert
+  description: React 19, hooks, server components, state management
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - react
+  - typescript
+  - frontend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: react-development
+- name: rust-engineer
+  description: Memory safety, ownership, async tokio, systems programming
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: secure-code-guardian
+  description: Authentication, authorization, OWASP secure coding
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - code-review
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: security-guardian
+- name: security-reviewer
+  description: Security audits, vulnerability scanning, DevSecOps
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - code-review
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: security-guardian
+- name: spark-engineer
+  description: Apache Spark, DataFrame, distributed data processing
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - python
+  - sql
+  - data-processing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: spec-miner
+  description: Reverse engineering specs from legacy code
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - documentation
+  - code-review
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: documentation-suite
+- name: spring-boot-engineer
+  description: Spring Boot 3.x, microservices, Spring Security, WebFlux
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - backend
+  - rest-api
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: sql-pro
+  description: Query patterns, window functions, optimization
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - sql
+  - postgresql
+  - redshift
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: database-pro
+- name: sre-engineer
+  description: SLOs/SLIs, error budgets, incident response, chaos testing
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - workflow
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: terraform-engineer
+  description: Infrastructure as code, modules, state management
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - workflow
+  - productivity
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: devops-infrastructure
+- name: test-master
+  description: Comprehensive testing strategy — functional/security/performance
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - testing
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: testing-qa-suite
+- name: the-fool
+  description: Critical reasoning, devil's advocate, pre-mortem analysis
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - planning
+  - workflow
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: typescript-pro
+  description: Advanced types, generics, type guards, full-stack type safety
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  tech_stack_tags:
+  - typescript
+  - rest-api
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+  consolidated_into: typescript-javascript
+- name: websocket-engineer
+  description: WebSocket/Socket.IO, real-time bidirectional messaging
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags:
+  - rest-api
+  - backend
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: angular-architect
+  description: Angular framework specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Angular not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: atlassian-mcp
+  description: Jira/Confluence MCP integration
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Niche platform integration not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: chaos-engineer
+  description: Chaos engineering / fault injection
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: DevOps niche, not in active tags
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: cloud-architect
+  description: AWS/Azure/GCP infrastructure specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Cloud infra not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: cpp-pro
+  description: C++ language specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: C++ not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: csharp-developer
+  description: C#/.NET language specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: C#/.NET not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: dotnet-core-expert
+  description: .NET Core specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: .NET not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: embedded-systems
+  description: Embedded/firmware specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Embedded not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: fine-tuning-expert
+  description: LLM fine-tuning specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Niche ML — not general dev
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: flutter-expert
+  description: Flutter mobile framework
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Flutter/mobile not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: kotlin-specialist
+  description: Kotlin/Android specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Kotlin/Android not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: ml-pipeline
+  description: ML pipeline specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: ML pipeline niche — not general dev
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: prompt-engineer
+  description: LLM prompt design
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Niche AI — not general dev
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: rag-architect
+  description: RAG/embeddings specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Niche AI/ML — not general dev
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: react-native-expert
+  description: React Native mobile framework
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Mobile not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: salesforce-developer
+  description: Salesforce CRM platform
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Salesforce not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: shopify-expert
+  description: Shopify e-commerce platform
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Shopify not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: swift-expert
+  description: Swift/iOS/macOS specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Swift/Apple not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: vue-expert
+  description: Vue.js framework specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Vue not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: vue-expert-js
+  description: Vue.js with JavaScript only
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: Vue not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: wordpress-pro
+  description: WordPress CMS specialist
+  source: claude-skills
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: rejected
+  rejection_reason: WordPress not in active stack
+  tech_stack_tags: []
+  compatible_agents: []
+  last_used:
+    claude: null
+    codex: null
+- name: react-development
+  description: 'Consolidated skill: react development'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - react-expert
+  - antigravity-react-best-practices
+  - antigravity-react-patterns
+  - antigravity-react-state-management
+  - antigravity-react-ui-patterns
+  - antigravity-react-nextjs-development
+  - antigravity-react-modernization
+  - nextjs-developer
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: frontend-ui-ux
+  description: 'Consolidated skill: frontend ui ux'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - alireza-senior-frontend
+  - alireza-landing-page-generator
+  - alireza-epic-design
+  - alireza-ui-design-system
+  - alireza-a11y-audit
+  - wshobson-frontend-mobile-development
+  - wshobson-frontend-mobile-security
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: typescript-javascript
+  description: 'Consolidated skill: typescript javascript'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - typescript-pro
+  - antigravity-typescript-expert
+  - antigravity-typescript-advanced-types
+  - javascript-pro
+  - wshobson-javascript-typescript
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: fp-typescript
+  description: 'Consolidated skill: fp typescript'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - antigravity-fp-async
+  - antigravity-fp-backend
+  - antigravity-fp-pragmatic
+  - antigravity-fp-react
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: python-core
+  description: 'Consolidated skill: python core'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - python-pro
+  - antigravity-python-patterns
+  - antigravity-python-performance-optimization
+  - antigravity-python-testing-patterns
+  - antigravity-python-packaging
+  - antigravity-python-development-python-scaffold
+  - antigravity-async-python-patterns
+  - wshobson-python-development
+  - antigravity-pydantic-models-py
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: python-web-frameworks
+  description: 'Consolidated skill: python web frameworks'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - fastapi-expert
+  - antigravity-fastapi-router-py
+  - antigravity-fastapi-templates
+  - antigravity-python-fastapi-development
+  - wshobson-api-scaffolding
+  - django-expert
+  - alireza-senior-backend
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: database-pro
+  description: 'Consolidated skill: database pro'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - sql-pro
+  - postgres-pro
+  - database-optimizer
+  - antigravity-postgresql
+  - antigravity-postgresql-optimization
+  - antigravity-sql-optimization-patterns
+  - antigravity-database
+  - antigravity-database-admin
+  - antigravity-database-architect
+  - alireza-database-designer
+  - alireza-database-schema-designer
+  - wshobson-database-design
+  - wshobson-database-cloud-optimization
+  - wshobson-database-migrations
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: data-engineering-pro
+  description: 'Consolidated skill: data engineering pro'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - antigravity-data-engineer
+  - antigravity-data-engineering-data-pipeline
+  - antigravity-data-engineering-data-driven-feature
+  - antigravity-data-quality-frameworks
+  - antigravity-dbt-transformation-patterns
+  - wshobson-data-engineering
+  - alireza-senior-data-engineer
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: data-visualization-pro
+  description: 'Consolidated skill: data visualization pro'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - antigravity-plotly
+  - antigravity-seaborn
+  - antigravity-matplotlib
+  - csv-data-summarizer
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: agent-engineering-pro
+  description: 'Consolidated skill: agent engineering pro'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - dispatching-parallel-agents
+  - subagent-driven-development
+  - using-superpowers
+  - antigravity-multi-agent-patterns
+  - antigravity-parallel-agents
+  - antigravity-autonomous-agents
+  - antigravity-autonomous-agent-patterns
+  - antigravity-agent-orchestrator
+  - antigravity-ai-agent-development
+  - antigravity-ai-agents-architect
+  - antigravity-ai-engineer
+  - wshobson-agent-orchestration
+  - wshobson-agent-teams
+  - alireza-agent-designer
+  - alireza-agent-workflow-designer
+  - alireza-agenthub
+  - alireza-self-improving-agent
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: memory-context-pro
+  description: 'Consolidated skill: memory context pro'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - antigravity-agent-memory-systems
+  - antigravity-agent-memory-mcp
+  - antigravity-context-management-context-save
+  - antigravity-context-management-context-restore
+  - antigravity-context-guardian
+  - antigravity-context-compression
+  - antigravity-memory-systems
+  - antigravity-hierarchical-agent-memory
+  - antigravity-conversation-memory
+  - wshobson-context-management
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: rag-search-pro
+  description: 'Consolidated skill: rag search pro'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - antigravity-embedding-strategies
+  - antigravity-hybrid-search-implementation
+  - antigravity-similarity-search-patterns
+  - alireza-rag-architect
+  - wshobson-llm-application-dev
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: testing-qa-suite
+  description: 'Consolidated skill: testing qa suite'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - test-master
+  - test-driven-development
+  - pypict
+  - playwright-expert
+  - alireza-tdd-guide
+  - alireza-playwright-pro
+  - alireza-senior-qa
+  - alireza-api-test-suite-builder
+  - wshobson-tdd-workflows
+  - wshobson-unit-testing
+  - wshobson-performance-testing-review
+  - wshobson-api-testing-observability
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: debugging-master
+  description: 'Consolidated skill: debugging master'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - debugging-wizard
+  - systematic-debugging
+  - wshobson-debugging-toolkit
+  - wshobson-error-debugging
+  - wshobson-error-diagnostics
+  - wshobson-distributed-debugging
+  - alireza-performance-profiler
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: code-review-suite
+  description: 'Consolidated skill: code review suite'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - code-reviewer
+  - receiving-code-review
+  - requesting-code-review
+  - wshobson-comprehensive-review
+  - alireza-pr-review-expert
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: security-guardian
+  description: 'Consolidated skill: security guardian'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - secure-code-guardian
+  - security-reviewer
+  - alireza-env-secrets-manager
+  - alireza-dependency-auditor
+  - alireza-senior-security
+  - alireza-senior-secops
+  - wshobson-security-compliance
+  - wshobson-security-scanning
+  - wshobson-developer-essentials
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: api-design-pro
+  description: 'Consolidated skill: api design pro'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - api-designer
+  - graphql-architect
+  - antigravity-api-patterns
+  - antigravity-api-documentation
+  - antigravity-api-documentation-generator
+  - antigravity-openapi-spec-generation
+  - alireza-api-design-reviewer
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: devops-infrastructure
+  description: 'Consolidated skill: devops infrastructure'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - devops-engineer
+  - alireza-ci-cd-pipeline-builder
+  - alireza-docker-development
+  - alireza-helm-chart-builder
+  - wshobson-cicd-automation
+  - wshobson-deployment-validation
+  - terraform-engineer
+  - alireza-terraform-patterns
+  - kubernetes-specialist
+  - wshobson-kubernetes-operations
+  - alireza-senior-devops
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: observability-monitoring
+  description: 'Consolidated skill: observability monitoring'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - monitoring-expert
+  - alireza-observability-designer
+  - wshobson-observability-monitoring
+  - wshobson-application-performance
+  - wshobson-incident-response
+  - alireza-incident-commander
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: architecture-planning
+  description: 'Consolidated skill: architecture planning'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - architecture-designer
+  - executing-plans
+  - writing-plans
+  - feature-forge
+  - alireza-senior-architect
+  - alireza-tech-stack-evaluator
+  - microservices-architect
+  - wshobson-full-stack-orchestration
+  - wshobson-c4-architecture
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: documentation-suite
+  description: 'Consolidated skill: documentation suite'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - code-documenter
+  - wshobson-code-documentation
+  - wshobson-documentation-generation
+  - alireza-codebase-onboarding
+  - alireza-runbook-generator
+  - spec-miner
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: git-workflow
+  description: 'Consolidated skill: git workflow'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - finishing-a-development-branch
+  - using-git-worktrees
+  - alireza-git-worktree-manager
+  - wshobson-git-pr-workflows
+  - alireza-release-manager
+  - alireza-changelog-generator
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: code-quality-refactoring
+  description: 'Consolidated skill: code quality refactoring'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - wshobson-code-refactoring
+  - wshobson-codebase-cleanup
+  - wshobson-dependency-management
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: product-management
+  description: 'Consolidated skill: product management'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - alireza-agile-product-owner
+  - alireza-product-manager-toolkit
+  - alireza-product-discovery
+  - alireza-product-strategist
+  - alireza-product-analytics
+  - alireza-experiment-designer
+  - alireza-competitive-teardown
+  - alireza-roadmap-communicator
+  - alireza-ux-researcher-designer
+  - alireza-code-to-prd
+  - alireza-senior-pm
+  - alireza-scrum-master
+  - scrum-sage
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: productivity-learning
+  description: 'Consolidated skill: productivity learning'
+  source: skill-hub-consolidation
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: agent-ready
+  consolidated_from:
+  - article-extractor
+  - learn-this
+  - ship-learn-next
+  - unblock-action
+  - youtube-transcript
+  tech_stack_tags: []
+  compatible_agents:
+  - claude
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-a11y-audit
+  description: Consolidated into frontend-ui-ux
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: frontend-ui-ux
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-agent-designer
+  description: Consolidated into agent-engineering-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-agent-workflow-designer
+  description: Consolidated into agent-engineering-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-agenthub
+  description: Consolidated into agent-engineering-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-agile-product-owner
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-api-design-reviewer
+  description: Consolidated into api-design-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: api-design-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-api-test-suite-builder
+  description: Consolidated into testing-qa-suite
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-changelog-generator
+  description: Consolidated into git-workflow
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: git-workflow
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-ci-cd-pipeline-builder
+  description: Consolidated into devops-infrastructure
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-code-to-prd
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-codebase-onboarding
+  description: Consolidated into documentation-suite
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: documentation-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-competitive-teardown
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-database-designer
+  description: Consolidated into database-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-database-schema-designer
+  description: Consolidated into database-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-dependency-auditor
+  description: Consolidated into security-guardian
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: security-guardian
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-docker-development
+  description: Consolidated into devops-infrastructure
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-env-secrets-manager
+  description: Consolidated into security-guardian
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: security-guardian
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-epic-design
+  description: Consolidated into frontend-ui-ux
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: frontend-ui-ux
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-experiment-designer
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-git-worktree-manager
+  description: Consolidated into git-workflow
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: git-workflow
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-helm-chart-builder
+  description: Consolidated into devops-infrastructure
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-incident-commander
+  description: Consolidated into observability-monitoring
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: observability-monitoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-landing-page-generator
+  description: Consolidated into frontend-ui-ux
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: frontend-ui-ux
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-observability-designer
+  description: Consolidated into observability-monitoring
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: observability-monitoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-performance-profiler
+  description: Consolidated into debugging-master
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: debugging-master
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-playwright-pro
+  description: Consolidated into testing-qa-suite
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-pr-review-expert
+  description: Consolidated into code-review-suite
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: code-review-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-product-analytics
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-product-discovery
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-product-manager-toolkit
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-product-strategist
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-rag-architect
+  description: Consolidated into rag-search-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: rag-search-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-release-manager
+  description: Consolidated into git-workflow
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: git-workflow
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-roadmap-communicator
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-runbook-generator
+  description: Consolidated into documentation-suite
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: documentation-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-scrum-master
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-self-improving-agent
+  description: Consolidated into agent-engineering-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-architect
+  description: Consolidated into architecture-planning
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: architecture-planning
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-backend
+  description: Consolidated into python-web-frameworks
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-web-frameworks
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-data-engineer
+  description: Consolidated into data-engineering-pro
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-devops
+  description: Consolidated into devops-infrastructure
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-frontend
+  description: Consolidated into frontend-ui-ux
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: frontend-ui-ux
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-pm
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-qa
+  description: Consolidated into testing-qa-suite
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-secops
+  description: Consolidated into security-guardian
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: security-guardian
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-security
+  description: Consolidated into security-guardian
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: security-guardian
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-tdd-guide
+  description: Consolidated into testing-qa-suite
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-tech-stack-evaluator
+  description: Consolidated into architecture-planning
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: architecture-planning
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-terraform-patterns
+  description: Consolidated into devops-infrastructure
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-ui-design-system
+  description: Consolidated into frontend-ui-ux
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: frontend-ui-ux
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-ux-researcher-designer
+  description: Consolidated into product-management
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: product-management
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-agent-memory-mcp
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-agent-memory-systems
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-agent-orchestrator
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-ai-agent-development
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-ai-agents-architect
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-ai-engineer
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-api-documentation
+  description: Consolidated into api-design-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: api-design-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-api-documentation-generator
+  description: Consolidated into api-design-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: api-design-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-api-patterns
+  description: Consolidated into api-design-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: api-design-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-async-python-patterns
+  description: Consolidated into python-core
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-autonomous-agent-patterns
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-autonomous-agents
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-context-compression
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-context-guardian
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-context-management-context-restore
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-context-management-context-save
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-conversation-memory
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-data-engineer
+  description: Consolidated into data-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-data-engineering-data-driven-feature
+  description: Consolidated into data-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-data-engineering-data-pipeline
+  description: Consolidated into data-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-data-quality-frameworks
+  description: Consolidated into data-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-database
+  description: Consolidated into database-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-database-admin
+  description: Consolidated into database-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-database-architect
+  description: Consolidated into database-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-dbt-transformation-patterns
+  description: Consolidated into data-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-embedding-strategies
+  description: Consolidated into rag-search-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: rag-search-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-fastapi-router-py
+  description: Consolidated into python-web-frameworks
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-web-frameworks
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-fastapi-templates
+  description: Consolidated into python-web-frameworks
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-web-frameworks
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-fp-async
+  description: Consolidated into fp-typescript
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: fp-typescript
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-fp-backend
+  description: Consolidated into fp-typescript
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: fp-typescript
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-fp-pragmatic
+  description: Consolidated into fp-typescript
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: fp-typescript
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-fp-react
+  description: Consolidated into fp-typescript
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: fp-typescript
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-hierarchical-agent-memory
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-hybrid-search-implementation
+  description: Consolidated into rag-search-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: rag-search-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-matplotlib
+  description: Consolidated into data-visualization-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-visualization-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-memory-systems
+  description: Consolidated into memory-context-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-multi-agent-patterns
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-openapi-spec-generation
+  description: Consolidated into api-design-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: api-design-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-parallel-agents
+  description: Consolidated into agent-engineering-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-plotly
+  description: Consolidated into data-visualization-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-visualization-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-postgresql
+  description: Consolidated into database-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-postgresql-optimization
+  description: Consolidated into database-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-pydantic-models-py
+  description: Consolidated into python-core
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-python-development-python-scaffold
+  description: Consolidated into python-core
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-python-fastapi-development
+  description: Consolidated into python-web-frameworks
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-web-frameworks
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-python-packaging
+  description: Consolidated into python-core
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-python-patterns
+  description: Consolidated into python-core
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-python-performance-optimization
+  description: Consolidated into python-core
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-python-testing-patterns
+  description: Consolidated into python-core
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-react-best-practices
+  description: Consolidated into react-development
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: react-development
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-react-modernization
+  description: Consolidated into react-development
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: react-development
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-react-nextjs-development
+  description: Consolidated into react-development
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: react-development
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-react-patterns
+  description: Consolidated into react-development
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: react-development
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-react-state-management
+  description: Consolidated into react-development
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: react-development
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-react-ui-patterns
+  description: Consolidated into react-development
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: react-development
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-seaborn
+  description: Consolidated into data-visualization-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-visualization-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-similarity-search-patterns
+  description: Consolidated into rag-search-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: rag-search-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-sql-optimization-patterns
+  description: Consolidated into database-pro
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-typescript-advanced-types
+  description: Consolidated into typescript-javascript
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: typescript-javascript
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-typescript-expert
+  description: Consolidated into typescript-javascript
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: typescript-javascript
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-agent-orchestration
+  description: Consolidated into agent-engineering-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-agent-teams
+  description: Consolidated into agent-engineering-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: agent-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-api-scaffolding
+  description: Consolidated into python-web-frameworks
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-web-frameworks
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-api-testing-observability
+  description: Consolidated into testing-qa-suite
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-application-performance
+  description: Consolidated into observability-monitoring
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: observability-monitoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-c4-architecture
+  description: Consolidated into architecture-planning
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: architecture-planning
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-cicd-automation
+  description: Consolidated into devops-infrastructure
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-code-documentation
+  description: Consolidated into documentation-suite
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: documentation-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-code-refactoring
+  description: Consolidated into code-quality-refactoring
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: code-quality-refactoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-codebase-cleanup
+  description: Consolidated into code-quality-refactoring
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: code-quality-refactoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-comprehensive-review
+  description: Consolidated into code-review-suite
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: code-review-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-context-management
+  description: Consolidated into memory-context-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: memory-context-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-data-engineering
+  description: Consolidated into data-engineering-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: data-engineering-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-database-cloud-optimization
+  description: Consolidated into database-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-database-design
+  description: Consolidated into database-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-database-migrations
+  description: Consolidated into database-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: database-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-debugging-toolkit
+  description: Consolidated into debugging-master
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: debugging-master
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-dependency-management
+  description: Consolidated into code-quality-refactoring
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: code-quality-refactoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-deployment-validation
+  description: Consolidated into devops-infrastructure
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-developer-essentials
+  description: Consolidated into security-guardian
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: security-guardian
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-distributed-debugging
+  description: Consolidated into debugging-master
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: debugging-master
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-documentation-generation
+  description: Consolidated into documentation-suite
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: documentation-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-error-debugging
+  description: Consolidated into debugging-master
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: debugging-master
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-error-diagnostics
+  description: Consolidated into debugging-master
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: debugging-master
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-frontend-mobile-development
+  description: Consolidated into frontend-ui-ux
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: frontend-ui-ux
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-frontend-mobile-security
+  description: Consolidated into frontend-ui-ux
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: frontend-ui-ux
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-full-stack-orchestration
+  description: Consolidated into architecture-planning
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: architecture-planning
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-git-pr-workflows
+  description: Consolidated into git-workflow
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: git-workflow
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-incident-response
+  description: Consolidated into observability-monitoring
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: observability-monitoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-javascript-typescript
+  description: Consolidated into typescript-javascript
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: typescript-javascript
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-kubernetes-operations
+  description: Consolidated into devops-infrastructure
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: devops-infrastructure
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-llm-application-dev
+  description: Consolidated into rag-search-pro
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: rag-search-pro
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-observability-monitoring
+  description: Consolidated into observability-monitoring
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: observability-monitoring
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-performance-testing-review
+  description: Consolidated into testing-qa-suite
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-python-development
+  description: Consolidated into python-core
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: python-core
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-security-compliance
+  description: Consolidated into security-guardian
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: security-guardian
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-security-scanning
+  description: Consolidated into security-guardian
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: security-guardian
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-tdd-workflows
+  description: Consolidated into testing-qa-suite
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-unit-testing
+  description: Consolidated into testing-qa-suite
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: consolidated
+  consolidated_into: testing-qa-suite
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-react-flow-architect
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-drizzle-orm-expert
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-prisma-expert
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-migration-architect
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-django-access-review
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-django-perf-review
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-uv-package-manager
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-pydantic-ai
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-skill-security-auditor
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-skill-tester
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-tech-debt-tracker
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-shell-scripting
+  description: Standalone promoted skill
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-game-development
+  description: Standalone promoted skill
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-financial-analyst
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-saas-metrics-coach
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-payment-processing
+  description: Standalone promoted skill
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-stripe-integration-expert
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-aws-solution-architect
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-mcp-builder
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-mcp-server-builder
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-epic-design
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-a11y-audit
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-multi-platform-apps
+  description: Standalone promoted skill
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-nodejs-best-practices
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-nodejs-backend-patterns
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-bun-development
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-hono
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-data-scientist
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-data-storytelling
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-data-scientist
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-prompt-engineer
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-autoresearch-agent
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-agent-evaluation
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-hierarchical-agent-memory
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-statsmodels
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-networkx
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-scikit-learn
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-scanpy
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-biopython
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-polars
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-spark-optimization
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-saas-scaffolder
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-research-summarizer
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-monorepo-navigator
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-fullstack
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-computer-vision
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-senior-ml-engineer
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: antigravity-fp-react
+  description: Standalone promoted skill
+  source: antigravity
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-systems-programming
+  description: Standalone promoted skill
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-jira-expert
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-confluence-expert
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-atlassian-admin
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: alireza-atlassian-templates
+  description: Standalone promoted skill
+  source: alirezarezvani
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null
+- name: wshobson-team-collaboration
+  description: Standalone promoted skill
+  source: wshobson
+  source_url: ''
+  date_added: '2026-03-29'
+  date_updated: '2026-03-29'
+  status: promoted
+  tech_stack_tags: []
+  compatible_agents:
+  - general
+  last_used:
+    claude: null
+    codex: null

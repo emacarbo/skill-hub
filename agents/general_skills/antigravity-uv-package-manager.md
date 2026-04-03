@@ -1,0 +1,5 @@
+# Uv Package Manager
+"Comprehensive guide to using uv, an extremely fast Python package installer and resolver written in Rust, for modern Python project management and dependency workflows."
+
+**Triggers:** Setting up new Python projects quickly, Managing Python dependencies faster than pip, Creating and managing virtual environments, Installing Python interpreters, Resolving dependency conflicts efficiently, Migrating from pip/pip-tools/poetry, Speeding up CI/CD pipelines, Managing monorepo Python projects, Working with lockfiles for reproducible builds, Optimizing Docker builds with Python dependencies
+**Full reference:** Read ~/dev/skill-hub/agents/general_skills/antigravity-uv-package-manager.md before using this skill.

@@ -1,0 +1,816 @@
+# Consolidation Map
+# Generated: 2026-03-29
+# 271 promoted skills → 26 clusters + standalones
+# Used by /skill-promote to merge clusters into single agent-optimized files
+
+clusters:
+
+  # ═══════════════════════════════════════════════════════════
+  # FRONTEND & UI
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: react-development
+    sources:
+      - react-expert
+      - antigravity-react-best-practices
+      - antigravity-react-patterns
+      - antigravity-react-state-management
+      - antigravity-react-ui-patterns
+      - antigravity-react-nextjs-development
+      - antigravity-react-modernization
+      - nextjs-developer
+    contributions:
+      react-expert: "React 19 specialist with Server Components, hooks, testing, reference deep dives"
+      antigravity-react-best-practices: "45-rule performance checklist prioritized by impact"
+      antigravity-react-patterns: "Decision tables for component design, hook extraction, state placement"
+      antigravity-react-state-management: "Redux Toolkit, Zustand, Jotai, React Query with migration guides"
+      antigravity-react-ui-patterns: "Loading/error/empty states, skeleton heuristics, optimistic updates"
+      antigravity-react-nextjs-development: "Multi-phase workflow across setup, components, testing, deployment"
+      antigravity-react-modernization: "Class-to-hooks migration, version upgrades, codemod automation"
+      nextjs-developer: "Next.js 14+ App Router, SSR streaming, caching, Vercel deployment"
+    blind_spots:
+      - "Storybook and component documentation workflows"
+      - "Design system integration (tokens, theming beyond Tailwind)"
+      - "Micro-frontend architecture with React"
+    keep_separate:
+      - antigravity-react-flow-architect  # ReactFlow library-specific
+      - antigravity-fp-react  # FP paradigm, belongs in fp-typescript cluster
+
+  - target_name: frontend-ui-ux
+    sources:
+      - alireza-senior-frontend
+      - alireza-landing-page-generator
+      - alireza-epic-design
+      - alireza-ui-design-system
+      - alireza-a11y-audit
+      - wshobson-frontend-mobile-development
+      - wshobson-frontend-mobile-security
+    contributions:
+      alireza-senior-frontend: "Project scaffolder, component generator, bundle analyzer, React/Next.js patterns"
+      alireza-landing-page-generator: "High-converting pages with copy frameworks (PAS, AIDA), SEO, Core Web Vitals"
+      alireza-epic-design: "Cinematic 2.5D scroll storytelling, parallax, GSAP animations"
+      alireza-ui-design-system: "Design tokens, color palettes, typography scales, 8pt grids, component systems"
+      alireza-a11y-audit: "WCAG 2.2 AA scan/fix/verify pipeline with framework-specific fixes"
+      wshobson-frontend-mobile-development: "React 19, Next.js 15, React Native, Tailwind, component scaffolding"
+      wshobson-frontend-mobile-security: "XSS prevention, CSP configuration, DOM security"
+    blind_spots:
+      - "CSS-in-JS vs utility-first deep comparison"
+      - "Animation library comparison (Framer Motion vs GSAP vs CSS)"
+      - "i18n/l10n implementation patterns"
+      - "PWA implementation"
+    keep_separate:
+      - alireza-epic-design  # cinematic design is niche
+      - alireza-a11y-audit  # standalone audit tool
+      - wshobson-multi-platform-apps  # cross-platform is distinct
+      - fullstack-guardian  # security-first full-stack, spans clusters
+
+  # ═══════════════════════════════════════════════════════════
+  # TYPESCRIPT & JAVASCRIPT
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: typescript-javascript
+    sources:
+      - typescript-pro
+      - antigravity-typescript-expert
+      - antigravity-typescript-advanced-types
+      - javascript-pro
+      - wshobson-javascript-typescript
+    contributions:
+      typescript-pro: "Advanced types (branded, discriminated unions, conditional/mapped) with tRPC safety"
+      antigravity-typescript-expert: "Project analysis workflow, monorepo detection, sub-agent routing"
+      antigravity-typescript-advanced-types: "Deep generics, template literals, type inference, library authoring"
+      javascript-pro: "ES2023+, async/await, ESM/CJS, browser APIs, Web Workers, Node.js"
+      wshobson-javascript-typescript: "Multi-agent bundle with scaffold commands and testing sub-skills"
+    blind_spots:
+      - "Deno-specific patterns (beyond Hono)"
+      - "Module federation and monorepo build orchestration"
+      - "TypeScript compiler plugin development"
+    keep_separate:
+      - nestjs-expert  # NestJS is a framework, not a language skill
+      - antigravity-nodejs-best-practices  # Node.js runtime decisions
+      - antigravity-nodejs-backend-patterns  # backend architecture
+      - antigravity-bun-development  # different runtime
+      - antigravity-hono  # edge framework
+
+  - target_name: fp-typescript
+    sources:
+      - antigravity-fp-async
+      - antigravity-fp-backend
+      - antigravity-fp-pragmatic
+      - antigravity-fp-react
+    contributions:
+      antigravity-fp-async: "TaskEither async pipelines replacing nested try/catch"
+      antigravity-fp-backend: "ReaderTaskEither for backend DI, service composition, typed errors"
+      antigravity-fp-pragmatic: "Jargon-free 80/20 FP guide: pipe, Option, Either, TaskEither"
+      antigravity-fp-react: "fp-ts + React hooks (Option state, Either validation, RemoteData)"
+    blind_spots:
+      - "fp-ts Schema (io-ts) for runtime validation"
+      - "Effect-TS as modern alternative to fp-ts"
+      - "Functional optics (lenses, prisms)"
+    keep_separate:
+      - antigravity-fp-react  # React-specific, could stay with react-development
+
+  # ═══════════════════════════════════════════════════════════
+  # PYTHON
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: python-core
+    sources:
+      - python-pro
+      - antigravity-python-patterns
+      - antigravity-python-performance-optimization
+      - antigravity-python-testing-patterns
+      - antigravity-python-packaging
+      - antigravity-python-development-python-scaffold
+      - antigravity-async-python-patterns
+      - wshobson-python-development
+      - antigravity-pydantic-models-py
+    contributions:
+      python-pro: "Python 3.11+ with strict mypy, black/ruff, pytest, dataclasses, async, Poetry"
+      antigravity-python-patterns: "Framework selection (FastAPI vs Django vs Flask), async vs sync decisions"
+      antigravity-python-performance-optimization: "cProfile, memory profilers, CPU/IO optimization"
+      antigravity-python-testing-patterns: "pytest fixtures, mocking, parametrize, property-based, async tests"
+      antigravity-python-packaging: "pyproject.toml, wheels, PyPI publishing, namespace packages"
+      antigravity-python-development-python-scaffold: "Automated scaffolding with modern tooling (uv, FastAPI, Django)"
+      antigravity-async-python-patterns: "Deep asyncio: task groups, gather, queues, cancellation, backpressure"
+      wshobson-python-development: "Multi-agent bundle with python-pro, fastapi-pro, django-pro agents"
+      antigravity-pydantic-models-py: "Multi-model Pydantic pattern (Base/Create/Update/Response/InDB)"
+    blind_spots:
+      - "Python CLI frameworks (Click, Typer) in depth"
+      - "Python C extensions and Cython optimization"
+      - "Python logging and observability patterns"
+    keep_separate:
+      - antigravity-pydantic-ai  # agent framework, belongs in agent cluster
+      - antigravity-uv-package-manager  # specific tool, lightweight standalone
+
+  - target_name: python-web-frameworks
+    sources:
+      - fastapi-expert
+      - antigravity-fastapi-router-py
+      - antigravity-fastapi-templates
+      - antigravity-python-fastapi-development
+      - wshobson-api-scaffolding
+      - django-expert
+      - alireza-senior-backend
+    contributions:
+      fastapi-expert: "Full FastAPI with Pydantic V2, async SQLAlchemy, JWT, WebSockets, OpenAPI"
+      antigravity-fastapi-router-py: "Router templates with auth patterns, response models, HTTP status codes"
+      antigravity-fastapi-templates: "Production FastAPI scaffolding with async, DI, middleware, DB integration"
+      antigravity-python-fastapi-development: "Multi-phase orchestrator: setup, database, routes, auth, testing, deploy"
+      wshobson-api-scaffolding: "Multi-agent API scaffolding (FastAPI, Django, GraphQL)"
+      django-expert: "Django 5.0 with DRF, async views, ORM optimization, admin"
+      alireza-senior-backend: "Framework-agnostic backend tools: API scaffolder, migration analyzer, load tester"
+    blind_spots:
+      - "Alembic migration patterns and strategies"
+      - "API versioning strategies across frameworks"
+      - "GraphQL with Strawberry/Ariadne in Python"
+    keep_separate:
+      - antigravity-django-access-review  # security audit, standalone
+      - antigravity-django-perf-review  # perf audit, standalone
+
+  # ═══════════════════════════════════════════════════════════
+  # DATABASE & SQL
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: database-pro
+    sources:
+      - sql-pro
+      - postgres-pro
+      - database-optimizer
+      - antigravity-postgresql
+      - antigravity-postgresql-optimization
+      - antigravity-sql-optimization-patterns
+      - antigravity-database
+      - antigravity-database-admin
+      - antigravity-database-architect
+      - alireza-database-designer
+      - alireza-database-schema-designer
+      - wshobson-database-design
+      - wshobson-database-cloud-optimization
+      - wshobson-database-migrations
+    contributions:
+      sql-pro: "Cross-dialect SQL (CTEs, window functions, EXPLAIN, benchmarking)"
+      postgres-pro: "PostgreSQL JSONB, GIN indexes, replication, VACUUM tuning, pg_stat"
+      database-optimizer: "Multi-engine tuning (index design, lock contention, partitioning)"
+      antigravity-postgresql: "PostgreSQL best-practices and configuration patterns"
+      antigravity-postgresql-optimization: "Phased PostgreSQL optimization workflow"
+      antigravity-sql-optimization-patterns: "SQL rewrite patterns and anti-pattern catalog"
+      antigravity-database: "Full DB lifecycle orchestration (design through pipelines)"
+      antigravity-database-admin: "Operational DBA (backups, replication, capacity, security)"
+      antigravity-database-architect: "Schema architecture and scalability design"
+      alireza-database-designer: "ER modeling and schema design tooling"
+      alireza-database-schema-designer: "Constraints, triggers, normalization"
+      wshobson-database-design: "Database design patterns and data modeling"
+      wshobson-database-cloud-optimization: "Cloud DB cost and performance optimization"
+      wshobson-database-migrations: "Version-controlled schema evolution"
+    blind_spots:
+      - "NoSQL databases (MongoDB, DynamoDB)"
+      - "Time-series databases (TimescaleDB, InfluxDB)"
+      - "Multi-tenant isolation patterns"
+    keep_separate:
+      - antigravity-drizzle-orm-expert  # TypeScript ORM, standalone
+      - antigravity-prisma-expert  # TypeScript ORM, standalone
+      - alireza-migration-architect  # zero-downtime migrations, standalone
+
+  # ═══════════════════════════════════════════════════════════
+  # DATA ENGINEERING & SCIENCE
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: data-engineering-pro
+    sources:
+      - antigravity-data-engineer
+      - antigravity-data-engineering-data-pipeline
+      - antigravity-data-engineering-data-driven-feature
+      - antigravity-data-quality-frameworks
+      - antigravity-dbt-transformation-patterns
+      - wshobson-data-engineering
+      - alireza-senior-data-engineer
+    contributions:
+      antigravity-data-engineer: "Modern data stack (lakehouse, Kafka, Airflow, cloud, governance)"
+      antigravity-data-engineering-data-pipeline: "Pipeline patterns (batch, streaming, CDC, error handling)"
+      antigravity-data-engineering-data-driven-feature: "Feature engineering and data-driven product implementation"
+      antigravity-data-quality-frameworks: "Great Expectations, dbt tests, data contracts"
+      antigravity-dbt-transformation-patterns: "dbt model organization, incremental strategies, testing, CI"
+      wshobson-data-engineering: "Data engineering reference patterns and architecture"
+      alireza-senior-data-engineer: "Actionable scripts (pipeline orchestrator, quality validator, ETL optimizer)"
+    blind_spots:
+      - "Dagster and Prefect orchestration patterns"
+      - "Data mesh / data product design"
+      - "Real-time feature stores (Feast, Tecton)"
+      - "Data catalog tooling (DataHub, Amundsen)"
+    keep_separate:
+      - antigravity-data-scientist  # ML modeling, distinct from engineering
+      - antigravity-data-storytelling  # communication, distinct
+      - alireza-senior-data-scientist  # analytics, distinct
+      - pandas-pro  # specific tool
+      - antigravity-polars  # specific tool
+      - spark-engineer  # specific tool
+      - antigravity-spark-optimization  # specific tool
+
+  - target_name: data-visualization-pro
+    sources:
+      - antigravity-plotly
+      - antigravity-seaborn
+      - antigravity-matplotlib
+      - csv-data-summarizer
+    contributions:
+      antigravity-plotly: "Interactive charts, Dash integration, HTML/web export, animations"
+      antigravity-seaborn: "Statistical graphics, FacetGrid, publication-quality defaults"
+      antigravity-matplotlib: "Foundational plotting, GridSpec, 3D, fine-grained customization"
+      csv-data-summarizer: "Auto-analyze CSV with summary stats and quick visualizations"
+    blind_spots:
+      - "Altair / Vega-Lite declarative visualization"
+      - "Dashboard frameworks (Streamlit, Panel, Gradio)"
+      - "Real-time / streaming visualization"
+    keep_separate:
+      - antigravity-statsmodels  # statistical modeling, not viz
+      - antigravity-networkx  # graph analysis, not viz
+
+  # ═══════════════════════════════════════════════════════════
+  # AGENTS & AI
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: agent-engineering-pro
+    sources:
+      - dispatching-parallel-agents
+      - subagent-driven-development
+      - using-superpowers
+      - antigravity-multi-agent-patterns
+      - antigravity-parallel-agents
+      - antigravity-autonomous-agents
+      - antigravity-autonomous-agent-patterns
+      - antigravity-agent-orchestrator
+      - antigravity-ai-agent-development
+      - antigravity-ai-agents-architect
+      - antigravity-ai-engineer
+      - wshobson-agent-orchestration
+      - wshobson-agent-teams
+      - alireza-agent-designer
+      - alireza-agent-workflow-designer
+      - alireza-agenthub
+      - alireza-self-improving-agent
+    contributions:
+      dispatching-parallel-agents: "Claude Code parallel sub-agent dispatch patterns"
+      subagent-driven-development: "Development driven by specialized sub-agents"
+      using-superpowers: "Skill invocation order and platform adaptation"
+      antigravity-multi-agent-patterns: "Supervisor/swarm/hierarchical patterns, consensus, token economics"
+      antigravity-parallel-agents: "Parallel execution and result aggregation"
+      antigravity-autonomous-agents: "Guardrails, reliability engineering, incremental autonomy"
+      antigravity-autonomous-agent-patterns: "Error recovery, self-correction for autonomous operation"
+      antigravity-agent-orchestrator: "Auto-discovery skill registry, keyword matching, orchestration modes"
+      antigravity-ai-agent-development: "End-to-end agent development lifecycle"
+      antigravity-ai-agents-architect: "Agent architecture with graceful degradation and failure modes"
+      antigravity-ai-engineer: "Production LLM application engineering"
+      wshobson-agent-orchestration: "Agent coordination patterns"
+      wshobson-agent-teams: "Team-based agent composition and role assignment"
+      alireza-agent-designer: "Agent design toolkit (roles, tools, communication, guardrails, evaluation)"
+      alireza-agent-workflow-designer: "Workflow graph design for multi-step agents"
+      alireza-agenthub: "Agent registry and discovery"
+      alireza-self-improving-agent: "Self-evaluation and iterative improvement loops"
+    blind_spots:
+      - "Agent observability and tracing (LangSmith, Braintrust)"
+      - "Agent security and sandboxing"
+      - "Human-in-the-loop approval workflows"
+      - "Agent cost budgeting and token accounting"
+    keep_separate:
+      - alireza-senior-prompt-engineer  # prompt engineering is distinct
+      - antigravity-pydantic-ai  # specific framework
+      - antigravity-agent-evaluation  # evaluation is distinct from building
+      - alireza-autoresearch-agent  # specific agent type
+
+  - target_name: memory-context-pro
+    sources:
+      - antigravity-agent-memory-systems
+      - antigravity-agent-memory-mcp
+      - antigravity-context-management-context-save
+      - antigravity-context-management-context-restore
+      - antigravity-context-guardian
+      - antigravity-context-compression
+      - antigravity-memory-systems
+      - antigravity-hierarchical-agent-memory
+      - antigravity-conversation-memory
+      - wshobson-context-management
+    contributions:
+      antigravity-agent-memory-systems: "Memory types (episodic, semantic, procedural), vector stores, chunking"
+      antigravity-agent-memory-mcp: "MCP-based cross-agent memory sharing"
+      antigravity-context-management-context-save: "Session state persistence"
+      antigravity-context-management-context-restore: "State rehydration and recovery"
+      antigravity-context-guardian: "Pre-compaction P0/P1/P2 extraction and integrity verification"
+      antigravity-context-compression: "Anchored summarization, opaque compression, tokens-per-task optimization"
+      antigravity-memory-systems: "Layered memory architecture (short/long-term, graph, temporal)"
+      antigravity-hierarchical-agent-memory: "Directory-scoped CLAUDE.md with token savings"
+      antigravity-conversation-memory: "Short/long-term/entity memory with relevance retrieval"
+      wshobson-context-management: "Vector DBs, knowledge graphs, multi-agent context coordination"
+    blind_spots:
+      - "Memory eviction and garbage collection"
+      - "Privacy-aware memory (PII redaction, retention policies)"
+      - "Memory conflict resolution for concurrent agents"
+    keep_separate:
+      - session-log  # structured session logging, lightweight standalone
+      - antigravity-hierarchical-agent-memory  # specific implementation pattern
+
+  - target_name: rag-search-pro
+    sources:
+      - antigravity-embedding-strategies
+      - antigravity-hybrid-search-implementation
+      - antigravity-similarity-search-patterns
+      - alireza-rag-architect
+      - wshobson-llm-application-dev
+    contributions:
+      antigravity-embedding-strategies: "Model comparison, chunking, local/API pipelines, dimension reduction"
+      antigravity-hybrid-search-implementation: "Dense+sparse fusion (BM25+vector, reciprocal rank fusion)"
+      antigravity-similarity-search-patterns: "ANN algorithms, vector DB scaling, latency optimization"
+      alireza-rag-architect: "Full RAG pipeline (chunking, retrieval, HyDE, RAGAS evaluation)"
+      wshobson-llm-application-dev: "LLM app suite (LangGraph, vector index tuning, prompt engineering)"
+    blind_spots:
+      - "GraphRAG (knowledge graph-augmented retrieval)"
+      - "Multi-modal RAG (image, audio, video)"
+      - "Agentic RAG with iterative retrieval and self-reflection"
+    keep_separate: []
+
+  # ═══════════════════════════════════════════════════════════
+  # TESTING & DEBUGGING
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: testing-qa-suite
+    sources:
+      - test-master
+      - test-driven-development
+      - pypict
+      - playwright-expert
+      - alireza-tdd-guide
+      - alireza-playwright-pro
+      - alireza-senior-qa
+      - alireza-api-test-suite-builder
+      - wshobson-tdd-workflows
+      - wshobson-unit-testing
+      - wshobson-performance-testing-review
+      - wshobson-api-testing-observability
+    contributions:
+      test-master: "Comprehensive strategy across functional, performance, security testing"
+      test-driven-development: "Iron-law TDD with red-green-refactor and rationalization detection"
+      pypict: "Pairwise combinatorial test case generation"
+      playwright-expert: "Playwright E2E, page objects, fixtures, visual regression, CI"
+      alireza-tdd-guide: "Multi-framework TDD with coverage parsing (LCOV/JSON/XML)"
+      alireza-playwright-pro: "55 Playwright templates, 3 agents, TestRail sync, BrowserStack"
+      alireza-senior-qa: "React/Next.js test generation with Jest/RTL, Istanbul coverage"
+      alireza-api-test-suite-builder: "API integration test suites and contract tests"
+      wshobson-tdd-workflows: "TDD cycle orchestration with code review agents"
+      wshobson-unit-testing: "Unit/integration test automation for Python and JavaScript"
+      wshobson-performance-testing-review: "Performance analysis and AI-powered quality assessment"
+      wshobson-api-testing-observability: "API mocking, doc generation, observability-aware testing"
+    blind_spots:
+      - "Mutation testing (Stryker, mutmut)"
+      - "Property-based testing (Hypothesis, fast-check)"
+      - "Database/data migration testing"
+    keep_separate:
+      - alireza-skill-tester  # unique domain: testing Claude skills, not application code
+
+  - target_name: debugging-master
+    sources:
+      - debugging-wizard
+      - systematic-debugging
+      - wshobson-debugging-toolkit
+      - wshobson-error-debugging
+      - wshobson-error-diagnostics
+      - wshobson-distributed-debugging
+      - alireza-performance-profiler
+    contributions:
+      debugging-wizard: "Hypothesis-driven debugging with multi-language debugger commands"
+      systematic-debugging: "4-phase root-cause methodology with anti-guess discipline"
+      wshobson-debugging-toolkit: "Interactive debugging workflows and DX optimization"
+      wshobson-error-debugging: "Error analysis, trace debugging, multi-agent diagnosis"
+      wshobson-error-diagnostics: "Root cause analysis and smart debugging for production"
+      wshobson-distributed-debugging: "Distributed system tracing across microservices"
+      alireza-performance-profiler: "CPU/memory profiling and bottleneck identification"
+    blind_spots:
+      - "Browser DevTools debugging (frontend-specific)"
+      - "Debugging in serverless environments"
+    keep_separate:
+      - alireza-tech-debt-tracker  # tech debt tracking is distinct from active debugging
+
+  # ═══════════════════════════════════════════════════════════
+  # CODE REVIEW & SECURITY
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: code-review-suite
+    sources:
+      - code-reviewer
+      - receiving-code-review
+      - requesting-code-review
+      - wshobson-comprehensive-review
+      - alireza-pr-review-expert
+    contributions:
+      code-reviewer: "Structured review (context-structure-details-tests-feedback) with OWASP, N+1 detection"
+      receiving-code-review: "Feedback reception with verification, YAGNI checks, pushback framework"
+      requesting-code-review: "Self-review checklist and spec compliance verification"
+      wshobson-comprehensive-review: "Multi-agent comprehensive code review orchestration"
+      alireza-pr-review-expert: "PR-specific diff analysis and security checks"
+    blind_spots:
+      - "Automated review tooling integration (SonarQube, CodeClimate)"
+      - "Review metrics and team review culture"
+    keep_separate: []
+
+  - target_name: security-guardian
+    sources:
+      - secure-code-guardian
+      - security-reviewer
+      - alireza-env-secrets-manager
+      - alireza-dependency-auditor
+      - alireza-senior-security
+      - alireza-senior-secops
+      - wshobson-security-compliance
+      - wshobson-security-scanning
+      - wshobson-developer-essentials
+    contributions:
+      secure-code-guardian: "Hands-on secure coding (bcrypt, parameterized queries, CSP, JWT)"
+      security-reviewer: "Security audits, SAST, penetration testing, DevSecOps, compliance"
+      alireza-env-secrets-manager: "Secrets lifecycle management"
+      alireza-dependency-auditor: "Dependency vulnerability scanning"
+      alireza-senior-security: "STRIDE threat modeling, OWASP, cryptography, attack surface"
+      alireza-senior-secops: "SAST/DAST, CVE remediation, SOC2/PCI-DSS/HIPAA/GDPR"
+      wshobson-security-compliance: "Security compliance automation"
+      wshobson-security-scanning: "Automated security scanning"
+      wshobson-developer-essentials: "Developer security baseline practices"
+    blind_spots:
+      - "Cloud IAM policy review"
+      - "Container image signing and supply chain security"
+      - "Runtime application self-protection (RASP)"
+    keep_separate:
+      - varlock  # standalone tool for env var management
+      - alireza-skill-security-auditor  # unique domain: auditing Claude skills
+
+  # ═══════════════════════════════════════════════════════════
+  # API DESIGN
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: api-design-pro
+    sources:
+      - api-designer
+      - graphql-architect
+      - antigravity-api-patterns
+      - antigravity-api-documentation
+      - antigravity-api-documentation-generator
+      - antigravity-openapi-spec-generation
+      - alireza-api-design-reviewer
+    contributions:
+      api-designer: "REST/GraphQL architecture with OpenAPI 3.1, versioning, pagination, RFC 7807"
+      graphql-architect: "GraphQL schema, Apollo Federation, DataLoader, subscriptions"
+      antigravity-api-patterns: "API style decision tree (REST vs GraphQL vs tRPC), auth, rate limiting"
+      antigravity-api-documentation: "API documentation workflow and developer guide creation"
+      antigravity-api-documentation-generator: "Automated doc generation from code"
+      antigravity-openapi-spec-generation: "OpenAPI 3.1 spec generation with SDK generation"
+      alireza-api-design-reviewer: "API design review and best-practice enforcement"
+    blind_spots:
+      - "AsyncAPI for event-driven APIs"
+      - "API gateway configuration (Kong, AWS API Gateway)"
+    keep_separate:
+      - mcp-developer  # MCP is a distinct protocol
+      - antigravity-mcp-builder  # MCP is a distinct protocol
+      - alireza-mcp-server-builder  # MCP is a distinct protocol
+      - websocket-engineer  # real-time is distinct from request/response
+
+  # ═══════════════════════════════════════════════════════════
+  # DEVOPS & INFRASTRUCTURE
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: devops-infrastructure
+    sources:
+      - devops-engineer
+      - alireza-ci-cd-pipeline-builder
+      - alireza-docker-development
+      - alireza-helm-chart-builder
+      - wshobson-cicd-automation
+      - wshobson-deployment-validation
+      - terraform-engineer
+      - alireza-terraform-patterns
+      - kubernetes-specialist
+      - wshobson-kubernetes-operations
+      - alireza-senior-devops
+    contributions:
+      devops-engineer: "Full DevOps lifecycle (GitHub Actions, Docker, K8s, Terraform, GitOps)"
+      alireza-ci-cd-pipeline-builder: "CI/CD pipeline scaffolding and configuration"
+      alireza-docker-development: "Dockerfile optimization, multi-stage builds, security"
+      alireza-helm-chart-builder: "Helm chart scaffolding, values design, template patterns"
+      wshobson-cicd-automation: "CI/CD automation workflows and orchestration"
+      wshobson-deployment-validation: "Post-deployment validation and verification"
+      terraform-engineer: "Terraform modules, state management, multi-environment"
+      alireza-terraform-patterns: "Terraform module design, Sentinel/OPA, multi-region"
+      kubernetes-specialist: "K8s manifests, RBAC, NetworkPolicies, storage, multi-cluster"
+      wshobson-kubernetes-operations: "Kubernetes operational workflows"
+      alireza-senior-devops: "Comprehensive DevOps across CI/CD, IaC, containers, multi-cloud"
+    blind_spots:
+      - "Pulumi/CDK alternatives in depth"
+      - "FinOps and cloud cost optimization"
+      - "Service mesh (Istio, Linkerd) in depth"
+    keep_separate:
+      - sre-engineer  # SRE is distinct (SLOs, error budgets, chaos engineering)
+      - alireza-aws-solution-architect  # cloud-provider-specific
+
+  - target_name: observability-monitoring
+    sources:
+      - monitoring-expert
+      - alireza-observability-designer
+      - wshobson-observability-monitoring
+      - wshobson-application-performance
+      - wshobson-incident-response
+      - alireza-incident-commander
+    contributions:
+      monitoring-expert: "Full observability (Prometheus/Grafana/OTel, logging, alerting, k6)"
+      alireza-observability-designer: "Observability architecture and instrumentation strategy"
+      wshobson-observability-monitoring: "Observability workflow automation"
+      wshobson-application-performance: "Application performance monitoring"
+      wshobson-incident-response: "Incident response workflows"
+      alireza-incident-commander: "Incident command and coordination"
+    blind_spots:
+      - "Observability cost optimization (log volume, metric cardinality)"
+      - "Synthetic monitoring and uptime checks"
+      - "Business-level observability (funnel metrics, revenue impact)"
+    keep_separate: []
+
+  # ═══════════════════════════════════════════════════════════
+  # ARCHITECTURE & PLANNING
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: architecture-planning
+    sources:
+      - architecture-designer
+      - executing-plans
+      - writing-plans
+      - feature-forge
+      - alireza-senior-architect
+      - alireza-tech-stack-evaluator
+      - microservices-architect
+      - wshobson-full-stack-orchestration
+      - wshobson-c4-architecture
+    contributions:
+      architecture-designer: "System design with ADRs, NFR checklists, Mermaid diagrams"
+      executing-plans: "Plan execution with review checkpoints"
+      writing-plans: "Plan document creation and review"
+      feature-forge: "Requirements workshops, EARS specs, user stories, acceptance criteria"
+      alireza-senior-architect: "Architecture diagrams, ADRs, dependency analysis, DB selection"
+      alireza-tech-stack-evaluator: "TCO analysis, security assessment, ecosystem health scoring"
+      microservices-architect: "DDD contexts, saga patterns, event sourcing, CQRS, service mesh"
+      wshobson-full-stack-orchestration: "Full-stack project orchestration"
+      wshobson-c4-architecture: "C4 model architecture diagramming"
+    blind_spots:
+      - "Data architecture and data mesh patterns"
+      - "Event-driven architecture beyond microservices"
+      - "Architecture fitness functions"
+    keep_separate:
+      - the-fool  # meta-skill: critical reasoning applicable beyond architecture
+      - brainstorming  # creative exploration, not architecture-specific
+
+  # ═══════════════════════════════════════════════════════════
+  # DOCUMENTATION, GIT, CODE QUALITY
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: documentation-suite
+    sources:
+      - code-documenter
+      - wshobson-code-documentation
+      - wshobson-documentation-generation
+      - alireza-codebase-onboarding
+      - alireza-runbook-generator
+      - spec-miner
+    contributions:
+      code-documenter: "Inline docs (Google/NumPy/JSDoc), OpenAPI specs, doc site generation"
+      wshobson-code-documentation: "Code documentation automation"
+      wshobson-documentation-generation: "Documentation generation from codebase analysis"
+      alireza-codebase-onboarding: "New developer onboarding documentation"
+      alireza-runbook-generator: "Operational runbook creation"
+      spec-miner: "Reverse-engineering specs from code using EARS format"
+    blind_spots:
+      - "Changelog and release notes automation"
+      - "Diagram-as-code generation from code"
+    keep_separate: []
+
+  - target_name: git-workflow
+    sources:
+      - finishing-a-development-branch
+      - using-git-worktrees
+      - alireza-git-worktree-manager
+      - wshobson-git-pr-workflows
+      - alireza-release-manager
+      - alireza-changelog-generator
+    contributions:
+      finishing-a-development-branch: "Branch completion with 4-option merge/PR/keep/discard workflow"
+      using-git-worktrees: "Worktree creation with safety verification and baseline tests"
+      alireza-git-worktree-manager: "Git worktree lifecycle automation"
+      wshobson-git-pr-workflows: "Git and PR workflow automation"
+      alireza-release-manager: "Release planning, branch coordination, versioning"
+      alireza-changelog-generator: "Automated changelog from git history"
+    blind_spots:
+      - "Git hooks management and enforcement"
+      - "Monorepo tooling (Nx, Turborepo)"
+    keep_separate:
+      - legacy-modernizer  # strategic modernization, beyond git workflow
+
+  - target_name: code-quality-refactoring
+    sources:
+      - wshobson-code-refactoring
+      - wshobson-codebase-cleanup
+      - wshobson-dependency-management
+    contributions:
+      wshobson-code-refactoring: "Code cleanup, refactoring automation, tech debt management"
+      wshobson-codebase-cleanup: "Dead code removal and codebase cleanup"
+      wshobson-dependency-management: "Dependency updates and compatibility analysis"
+    blind_spots:
+      - "Automated refactoring tools (jscodeshift, libcst)"
+      - "Code complexity metrics and thresholds"
+    keep_separate:
+      - wshobson-shell-scripting  # shell scripting is a distinct domain
+
+  # ═══════════════════════════════════════════════════════════
+  # PRODUCT MANAGEMENT
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: product-management
+    sources:
+      - alireza-agile-product-owner
+      - alireza-product-manager-toolkit
+      - alireza-product-discovery
+      - alireza-product-strategist
+      - alireza-product-analytics
+      - alireza-experiment-designer
+      - alireza-competitive-teardown
+      - alireza-roadmap-communicator
+      - alireza-ux-researcher-designer
+      - alireza-code-to-prd
+      - alireza-senior-pm
+      - alireza-scrum-master
+      - scrum-sage
+    contributions:
+      alireza-agile-product-owner: "Backlog management, user stories, acceptance criteria, sprint planning"
+      alireza-product-manager-toolkit: "RICE prioritization, customer interviews, PRD templates"
+      alireza-product-discovery: "Assumption mapping, discovery sprints, problem-solution fit"
+      alireza-product-strategist: "OKR cascade, quarterly planning, product vision documents"
+      alireza-product-analytics: "Product KPIs, cohort/retention analysis, feature adoption"
+      alireza-experiment-designer: "A/B test design, sample size estimation, statistical interpretation"
+      alireza-competitive-teardown: "12-dimension competitor matrices, SWOT, positioning maps"
+      alireza-roadmap-communicator: "Roadmap narratives, release notes, stakeholder updates"
+      alireza-ux-researcher-designer: "Personas, journey mapping, usability testing, research synthesis"
+      alireza-code-to-prd: "Reverse-engineering PRDs from existing codebases"
+      alireza-senior-pm: "Enterprise portfolio with EMV, Monte Carlo, WSJF, health scoring"
+      alireza-scrum-master: "Sprint analysis with Monte Carlo, health scoring, retro tracking"
+      scrum-sage: "Scrum coaching based on Sutherland/Ohno, Scrum@Scale, flow optimization"
+    blind_spots:
+      - "PLG patterns and onboarding optimization"
+      - "Pricing strategy and packaging"
+    keep_separate:
+      - alireza-saas-scaffolder  # code generation, not PM
+      - alireza-research-summarizer  # general research, not PM-specific
+
+  # ═══════════════════════════════════════════════════════════
+  # PRODUCTIVITY & LEARNING
+  # ═══════════════════════════════════════════════════════════
+
+  - target_name: productivity-learning
+    sources:
+      - article-extractor
+      - learn-this
+      - ship-learn-next
+      - unblock-action
+      - youtube-transcript
+    contributions:
+      article-extractor: "Clean article extraction from URLs stripping ads/nav"
+      learn-this: "Unified content extraction orchestrator (YouTube/article/PDF) + action plans"
+      ship-learn-next: "Transform learning into 5-rep progressive implementation quests"
+      unblock-action: "2-minute action unblocking: clarify output, scope to today, next action"
+      youtube-transcript: "YouTube transcript download and deduplication"
+    blind_spots:
+      - "Spaced repetition and retention tracking"
+      - "Personal knowledge management (Zettelkasten)"
+    keep_separate:
+      - writing-skills  # meta-skill for creating Claude skills
+      - email-html-mjml  # email template craft
+
+# ═══════════════════════════════════════════════════════════
+# STANDALONES
+# ═══════════════════════════════════════════════════════════
+
+standalones:
+  # Niche tools — useful but don't cluster
+  - antigravity-react-flow-architect  # ReactFlow library-specific
+  - antigravity-drizzle-orm-expert  # TypeScript ORM
+  - antigravity-prisma-expert  # TypeScript ORM
+  - alireza-migration-architect  # zero-downtime migrations
+  - antigravity-django-access-review  # Django security audit
+  - antigravity-django-perf-review  # Django perf audit
+  - antigravity-uv-package-manager  # Python package tool
+  - antigravity-pydantic-ai  # PydanticAI agent framework
+  - session-log  # structured session logging
+  - varlock  # env var security tool
+  - alireza-skill-security-auditor  # Claude skill auditing
+  - alireza-skill-tester  # Claude skill testing
+  - alireza-tech-debt-tracker  # tech debt tracking
+  - the-fool  # critical reasoning meta-skill
+  - brainstorming  # creative exploration meta-skill
+  - legacy-modernizer  # strangler fig, modernization
+  - writing-skills  # meta-skill for creating skills
+  - email-html-mjml  # email template generation
+  - wshobson-shell-scripting  # shell scripting patterns
+  - cli-developer  # CLI tool development
+
+  # Small groups (2-3, not worth a full cluster)
+  - game-developer  # game dev
+  - wshobson-game-development  # game dev workflows
+  - alireza-financial-analyst  # DCF, ratio analysis, budgeting
+  - alireza-saas-metrics-coach  # SaaS metrics (ARR, MRR, LTV, CAC)
+  - wshobson-payment-processing  # payment processing
+  - alireza-stripe-integration-expert  # Stripe integration
+  - sre-engineer  # SRE (SLOs, error budgets, chaos)
+  - alireza-aws-solution-architect  # AWS serverless architecture
+  - mcp-developer  # MCP protocol
+  - antigravity-mcp-builder  # MCP server creation
+  - alireza-mcp-server-builder  # MCP scaffolding
+  - websocket-engineer  # real-time protocols
+  - fullstack-guardian  # security-first full-stack
+  - alireza-epic-design  # cinematic web design
+  - alireza-a11y-audit  # WCAG accessibility audit
+  - wshobson-multi-platform-apps  # cross-platform
+  - nestjs-expert  # NestJS framework
+  - antigravity-nodejs-best-practices  # Node.js runtime
+  - antigravity-nodejs-backend-patterns  # Node.js backend
+  - antigravity-bun-development  # Bun runtime
+  - antigravity-hono  # Hono edge framework
+  - antigravity-data-scientist  # ML modeling
+  - antigravity-data-storytelling  # data communication
+  - alireza-senior-data-scientist  # advanced analytics
+  - alireza-senior-prompt-engineer  # prompt engineering
+  - alireza-autoresearch-agent  # autonomous research agent
+  - antigravity-agent-evaluation  # agent eval framework
+  - antigravity-hierarchical-agent-memory  # CLAUDE.md memory pattern
+  - antigravity-statsmodels  # statistical modeling
+  - antigravity-networkx  # graph analysis
+  - antigravity-scikit-learn  # classical ML
+  - antigravity-scanpy  # single-cell RNA-seq
+  - antigravity-biopython  # computational biology
+  - pandas-pro  # pandas DataFrame
+  - antigravity-polars  # Polars DataFrame
+  - spark-engineer  # Spark distributed processing
+  - antigravity-spark-optimization  # Spark optimization
+  - alireza-saas-scaffolder  # SaaS boilerplate generator
+  - alireza-research-summarizer  # research summarization
+  - alireza-monorepo-navigator  # monorepo navigation
+  - alireza-senior-fullstack  # full-stack scaffolding
+  - alireza-senior-computer-vision  # computer vision
+  - alireza-senior-ml-engineer  # ML engineering
+  - antigravity-fp-react  # FP + React (also in fp-typescript)
+
+  # Backend frameworks (language-specific standalones)
+  - golang-pro
+  - rust-engineer
+  - wshobson-systems-programming
+  - rails-expert
+  - laravel-specialist
+  - spring-boot-engineer
+  - java-architect
+  - php-pro
+
+  # Atlassian tools
+  - alireza-jira-expert
+  - alireza-confluence-expert
+  - alireza-atlassian-admin
+  - alireza-atlassian-templates
+  - wshobson-team-collaboration
