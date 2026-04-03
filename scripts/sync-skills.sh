@@ -98,10 +98,18 @@ for md_file in "$GENERAL_SKILLS"/*.md; do
     rm -rf "$target_dir"
   fi
 
-  # Create directory and symlink
+  # Generate a compact stub instead of symlinking the full file.
+  # Stubs are ~500B vs 5-30KB full files — critical for context budget.
+  # Full content is read on demand via the path in the stub.
   mkdir -p "$target_dir"
-  ln -s "$md_file" "$target_dir/SKILL.md"
-  echo "CREATE $name"
+  python3 "$SCRIPT_DIR/generate-stubs.py" "$name" --output-dir "$SKILLS_DIR" --source-dir "$GENERAL_SKILLS" > /dev/null 2>&1
+  if [ $? -ne 0 ]; then
+    # Fallback: create symlink if stub generation fails
+    ln -s "$md_file" "$target_dir/SKILL.md"
+    echo "CREATE $name (symlink fallback — stub generation failed)"
+  else
+    echo "CREATE $name (stub)"
+  fi
   created=$((created + 1))
 done
 
