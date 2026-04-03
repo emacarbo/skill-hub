@@ -53,10 +53,12 @@ After any promotion:
 - Check: `du -cb ~/.claude/skills/*/SKILL.md | tail -1`
 - If adding this skill exceeds budget: identify a removal candidate first
 
-### Gate 3: Library Cap — 1-in-1-out
-- Hard cap: **70 skills** (25 Citadel + 45 general)
-- If at capacity, must remove or merge an existing skill before adding
-- Prefer removing lowest-usage skill (check `logs/claude/skills-usage.jsonl`)
+### Gate 3: Library Cap — Consolidate First
+- Soft cap: **70 skills** (25 Citadel + 45 general)
+- **Priority: consolidate/improve existing skills before adding new ones**
+- If over 70: justify with token budget (total stubs must stay under 25KB)
+- Taking on a new project/stack is a valid reason to exceed — update `stack-context.yaml` and deny-list
+- Prefer merging into existing skills or removing lowest-usage skill over growing the count
 
 ### Gate 4: Consolidation-First
 - If **≥30% overlap** with an existing skill → **must merge**, not add standalone

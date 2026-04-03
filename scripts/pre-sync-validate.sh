@@ -88,9 +88,9 @@ echo "Total file size: $total_size bytes (budget: $MAX_CONTEXT_BYTES for stubs)"
 echo ""
 
 if [ "$total_with_citadel" -gt "$MAX_SKILLS" ]; then
-  echo "FAIL  Skill cap exceeded: $total_with_citadel > $MAX_SKILLS"
-  echo "      Remove $((total_with_citadel - MAX_SKILLS)) skill(s) before syncing"
-  errors=$((errors + 1))
+  echo "WARN  Skill soft cap exceeded: $total_with_citadel > $MAX_SKILLS"
+  echo "      Exceeding cap is OK for new stacks — but verify stub budget stays under ${MAX_CONTEXT_BYTES}B"
+  warnings=$((warnings + 1))
 fi
 
 if [ "$errors" -gt 0 ]; then
