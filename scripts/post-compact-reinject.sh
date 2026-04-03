@@ -48,7 +48,7 @@ try:
                     for block in content:
                         if not isinstance(block, dict) or block.get('type') != 'tool_use': continue
                         name, inp = block.get('name',''), block.get('input',{})
-                        if name == 'Read' and '.claude/skills/' in inp.get('file_path',''): skills.add(Path(inp['file_path']).stem)
+                        if name == 'Read' and '.claude/skills/' in inp.get('file_path',''): skills.add(Path(inp['file_path']).parent.name)
                         elif name == 'Skill' and inp.get('skill',''): skills.add(inp['skill'])
             except: continue
 except: pass
