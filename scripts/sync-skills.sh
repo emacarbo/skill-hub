@@ -11,9 +11,28 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 GENERAL_SKILLS="/Users/emanuele.carbone/dev/skill-hub/agents/general_skills"
 SKILLS_DIR="$HOME/.claude/skills"
 DRY_RUN="${1:-}"
+
+# --- Enforcement gate: run pre-sync validation ---
+# This blocks the sync if stack relevance, budget, or cap checks fail.
+# Cannot be skipped — if the validator doesn't exist, sync refuses to run.
+VALIDATOR="$SCRIPT_DIR/pre-sync-validate.sh"
+if [ ! -x "$VALIDATOR" ]; then
+  echo "ERROR: pre-sync-validate.sh not found or not executable at $VALIDATOR"
+  echo "       Sync cannot proceed without validation."
+  exit 1
+fi
+
+echo "=== Running pre-sync validation ==="
+if ! bash "$VALIDATOR"; then
+  echo ""
+  echo "Sync BLOCKED by validation. Fix errors above first."
+  exit 1
+fi
+echo ""
 
 # Citadel orchestration skills to NEVER overwrite — they have multi-file
 # directory structures (SKILL.md + sub-agents + references) that our flat
