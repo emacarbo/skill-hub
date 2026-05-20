@@ -3,8 +3,6 @@
 Self-hosted SaaS conversion intelligence. Tracks funnel events, runs
 behavioral agents (Timing, Cohort, Churn), benchmarks against category
 medians, and logs applied fixes for impact measurement.
-
-Inspired by Voltaire — same patterns, fully open, no vendor lock-in.
 """
 from __future__ import annotations
 
@@ -69,7 +67,7 @@ def create_app(name: str, category: str, platform: str = "web") -> dict:
 def get_stats(app_name: str) -> dict:
     """Get current state of an app — config, event counts, data health.
 
-    Voltaire pattern: first tool to call, determines first-run vs recurring mode.
+    First tool to call — determines first-run vs recurring mode.
     """
     config = store.get_config(app_name)
     if config is None:
@@ -140,7 +138,7 @@ def record_event(
 def analyze_funnel(app_name: str, window_days: int = 30) -> dict:
     """Full conversion analysis — metrics, benchmarks, agent signals.
 
-    Voltaire pattern: returns raw data. The calling agent reasons about it,
+    Returns raw data. The calling agent reasons about it,
     synthesizes agent signals, and presents a diagnosis.
     """
     config = store.get_config(app_name)
@@ -231,8 +229,7 @@ def analyze_funnel(app_name: str, window_days: int = 30) -> dict:
 def mark_applied(app_name: str, description: str, file_path: str) -> dict:
     """Log that a fix was applied. Enables before/after impact tracking.
 
-    Voltaire pattern: every change is recorded so future runs have
-    full historical context.
+    Every change is recorded so future runs have full historical context.
     """
     # Get current CR as the "before" baseline
     config = store.get_config(app_name)

@@ -28,7 +28,6 @@ INDEX = HOME / 'dev/CLAUDE-INDEX.md'
 
 WORK_PATTERNS = [
     re.compile(r'^dqi[-_]'),
-    re.compile(r'^hudl[-_]'),
     re.compile(r'^equity[-_]'),
     re.compile(r'^finance[-_]'),
     re.compile(r'^trial[-_]'),

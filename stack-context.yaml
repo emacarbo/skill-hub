@@ -23,7 +23,7 @@ projects:
 
   dqi_mitochondria:
     path: ~/dev/dqi-mitochondria
-    description: Hudl finance dbt pipeline — contracts, AR, equity, sportscode restatement
+    description: Finance dbt pipeline — contracts, AR, equity, restatement
     stack:
       - dbt
       - sql

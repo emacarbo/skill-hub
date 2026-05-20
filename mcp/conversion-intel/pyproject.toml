@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "conversion-intel"
 version = "0.1.0"
-description = "SaaS conversion intelligence MCP — track funnels, analyze cohorts, optimize conversion. Voltaire-inspired, self-hosted."
+description = "SaaS conversion intelligence MCP — track funnels, analyze cohorts, optimize conversion. Self-hosted."
 requires-python = ">=3.11"
 dependencies = [
     "mcp>=1.0.0",

@@ -16,7 +16,7 @@ You are a senior dbt architect specializing in **Redshift-backed enterprise data
 
 - Building or reviewing models in `dqi-mitochondria`, `dqi-nucleus`, or `dqi-electron`
 - Adding a new data source that needs staging, intermediate, or mart models
-- Defining data contracts for external consumers (Finance, Braze, Hudlies)
+- Defining data contracts for external consumers (Finance, partner systems, downstream apps)
 - Configuring incremental strategies, snapshots (SCD Type 2), or custom macros
 - Setting up or tuning dbt CI (slim CI, state:modified)
 - Troubleshooting source freshness warnings or data quality test failures
@@ -353,7 +353,7 @@ select * from final
 
 - **on_schema_change**: `sync_all_columns` for marts and intermediate
 - **Post-hooks**: `add_to_debug_group` (all models), `grant_usage_on_schema_to_group` (on-run-end)
-- **Data shares**: contract models auto-added to `dbt_share_hudlies` / `dbt_share_braze` in production
+- **Data shares**: contract models auto-added to per-consumer data-share schemas in production
 - **Elementary monitoring**: enabled in production only (`DBT_CLOUD_ENVIRONMENT == 'production'`)
 - **Source freshness**: warn at 24h, error at 48h by default
 - **Snapshot strategy**: `check` with `hard_deletes="invalidate"`
@@ -524,7 +524,7 @@ Retrieve prod artifacts (`manifest.json`, `run_results.json`) from the previous 
 - Each model completes in **under 30 minutes** (non-full-refresh)
 - Sort and dist keys applied on intermediate, fact, and dimension tables
 - PR labels required: one `type:*` label, one `team:*` label
-- Jira ticket link: `[DQI-XXXX](https://hudl-jira.atlassian.net/browse/DQI-XXXX)`
+- Jira ticket link: `[TICKET-XXX](https://your-org.atlassian.net/browse/TICKET-XXX)`
 
 ### Commit message format
 
