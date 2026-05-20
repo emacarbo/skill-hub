@@ -25,7 +25,7 @@ behavior more richly and auto-triggers from context.
 | `/update-codemaps` | `documentation-suite` | Architecture map generation covered |
 | `/prd` | `product-management` | PRD generation is Section 3 of skill |
 | `/eval` | `verification-before-completion` | Eval definition/check/report maps to verification gate |
-| `/dev-preview` | project-specific | Hardcoded to project_pegasus (Yu-Gi-Oh) — not global |
+| `/dev-preview` | project-specific | Hardcoded to one specific project — not global |
 
 ## Irrelevant to active stack (13)
 

@@ -22,12 +22,8 @@ full-file reads with symbol-level lookups for ~99% token reduction.
 
 ## Workspace Roots
 
-- dqi-mitochondria
-- project_pegasus
-- equity_reallocation
-- equity_reconciliation
-- trial_balances_comparison
-- skill-hub
+Configure your own project paths via `token-savior set-project-root` —
+e.g. one entry per repo you actively edit, plus the skill-hub itself.
 
 ## Key Tools
 

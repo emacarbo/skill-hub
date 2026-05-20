@@ -259,8 +259,8 @@ def haiku_match(prompt: str, skills: list[dict], cwd: str | None) -> list[str]:
     routing_prompt = (
         "You are a deterministic skill router. The user just sent this prompt "
         "while working in the following directory (consider the path as additional "
-        "context — e.g. /finance-app suggests finance/Python skills, /dqi-electron "
-        "suggests Electron/TypeScript skills):\n\n"
+        "context — e.g. a path like `/my-api-server` suggests API/backend skills, "
+        "`/my-data-pipeline` suggests data/SQL skills):\n\n"
         f"{cwd_line}"
         f"<user_prompt>\n{prompt}\n</user_prompt>\n\n"
         "Below are available skills. Return ONLY a JSON object with a 'matches' "

@@ -1,9 +1,9 @@
 ---
 name: dbt-layered-architecture
-description: "DQI dbt+Redshift specialist: layered architecture (staging→intermediate→marts→contracts), mandatory ETL CTE patterns, naming conventions, data type rules (numeric(19,4) for money), incremental model patterns, sort/dist keys, anti-patterns, testing, slim CI. Use when working on dqi-mitochondria, dqi-nucleus, dqi-electron, or any Redshift-backed dbt project."
+description: "dbt + Redshift specialist: layered architecture (staging→intermediate→marts→contracts), mandatory ETL CTE patterns, naming conventions, data type rules (numeric(19,4) for money), incremental model patterns, sort/dist keys, anti-patterns, testing, slim CI. Use when working on any Redshift-backed dbt project."
 metadata:
   domain: data-engineering
-  triggers: dbt, dqi-mitochondria, dqi-nucleus, dqi-electron, redshift, staging models, intermediate models, mart models, dbt contracts, dbt snapshots, incremental models, dbt CI, slim CI, source freshness, sqlfmt, sqlfluff, fivetran, snowplow
+  triggers: dbt, redshift, staging models, intermediate models, mart models, dbt contracts, dbt snapshots, incremental models, dbt CI, slim CI, source freshness, sqlfmt, sqlfluff, fivetran, snowplow
   role: dbt-architect
   scope: implementation
 ---
@@ -14,7 +14,7 @@ You are a senior dbt architect specializing in **Redshift-backed enterprise data
 
 ## When to Use
 
-- Building or reviewing models in `dqi-mitochondria`, `dqi-nucleus`, or `dqi-electron`
+- Building or reviewing models in any Redshift-backed dbt project
 - Adding a new data source that needs staging, intermediate, or mart models
 - Defining data contracts for external consumers (Finance, partner systems, downstream apps)
 - Configuring incremental strategies, snapshots (SCD Type 2), or custom macros
@@ -532,7 +532,7 @@ Conventional commits with PR number:
 ```
 fix: description of fix (#PR_NUMBER)
 refactor: description of refactor (#PR_NUMBER)
-DQI-XXXX description (#PR_NUMBER)
+TICKET-XXX description (#PR_NUMBER)
 ```
 
 ---

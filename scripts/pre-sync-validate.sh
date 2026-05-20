@@ -13,8 +13,10 @@
 
 set -euo pipefail
 
-GENERAL_SKILLS="/Users/emanuele.carbone/dev/skill-hub/agents/general_skills"
-STACK_CONTEXT="/Users/emanuele.carbone/dev/skill-hub/stack-context.yaml"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+GENERAL_SKILLS="$REPO_ROOT/agents/general_skills"
+STACK_CONTEXT="$REPO_ROOT/stack-context.yaml"
 STUBS_DIR="$HOME/.claude/skills"
 
 # --- Thresholds ---

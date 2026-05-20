@@ -26,25 +26,19 @@ INDEX = HOME / 'dev/CLAUDE-INDEX.md'
 # Work / personal classification rules
 # ---------------------------------------------------------------------------
 
+# Edit these regexes to match YOUR project naming conventions.
+# Anything not matched by WORK_PATTERNS is classified as personal.
 WORK_PATTERNS = [
-    re.compile(r'^dqi[-_]'),
-    re.compile(r'^equity[-_]'),
-    re.compile(r'^finance[-_]'),
-    re.compile(r'^trial[-_]'),
+    re.compile(r'^work[-_]'),
+    re.compile(r'^client[-_]'),
 ]
 PERSONAL_PATTERNS = [
-    re.compile(r'^project[-_]pegasus'),
-    re.compile(r'^project[-_]ahre'),
     re.compile(r'^personal[-_]'),
-    re.compile(r'^pokergpt'),
-    re.compile(r'^dokkan'),
-    re.compile(r'^finance[-_]app$'),  # exception — this one IS work
+    re.compile(r'^hobby[-_]'),
 ]
 
 
 def classify(project_name: str) -> str:
-    if project_name == 'finance-app':
-        return 'work'
     for p in WORK_PATTERNS:
         if p.match(project_name):
             return 'work'

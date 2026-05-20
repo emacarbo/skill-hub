@@ -594,7 +594,7 @@ skills:
   last_used:
     claude: null
     codex: null
-  notes: 'Override: rejected by agent but game-dev is in active_tags (project_ahre)'
+  notes: 'Override: rejected by agent but game-dev is in active_tags'
 - name: golang-pro
   description: Go concurrency, goroutines, microservices
   source: claude-skills

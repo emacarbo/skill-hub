@@ -1,5 +1,5 @@
 ---
-description: Data engineering — dbt models, pipeline design, data quality, orchestration. Core for dqi-mitochondria work.
+description: Data engineering — dbt models, pipeline design, data quality, orchestration.
 ---
 
 # /data-pipeline — Data Engineering
@@ -25,7 +25,7 @@ Auto-detect from project:
 - `airflow/dags/` → Airflow orchestration context
 - Look for `models/`, `macros/`, `tests/` directories
 
-## dbt Conventions (from dqi-mitochondria)
+## dbt Conventions
 
 - Staging: `stg_<source>__<entity>` (rename, cast, no joins)
 - Intermediate: `int_<entity>_<verb>` (business logic, joins)

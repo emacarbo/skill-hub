@@ -15,7 +15,7 @@ Tells Claude Code "a marketplace lives at this filesystem path":
   "skill-hub-local": {
     "source": {
       "source": "directory",
-      "path": "/Users/emanuele.carbone/dev/skill-hub"
+      "path": "~/dev/skill-hub"
     }
   }
 }

@@ -17,7 +17,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-GENERAL_SKILLS="/Users/emanuele.carbone/dev/skill-hub/agents/general_skills"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+GENERAL_SKILLS="$REPO_ROOT/agents/general_skills"
 SKILLS_DIR="$HOME/.claude/skills"
 DRY_RUN="${1:-}"
 

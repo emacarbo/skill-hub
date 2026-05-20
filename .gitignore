@@ -54,6 +54,12 @@ usage.log
 .claude/settings.local.json
 .claude/cache/
 
+# Personal benchmark / migration snapshots (user-machine state)
+# stack-context.yaml is generated per-user from stack-context.example.yaml
+stack-context.yaml
+agents/claude/swap-report.md
+agents/claude/catalog-comparison.md
+
 # Secrets / env files (keep example templates)
 .env
 .env.local

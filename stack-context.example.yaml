@@ -1,0 +1,50 @@
+# ------------------------------------------------------------------
+# Purpose: Personal benchmark stack — drives skill-eval relevance checks
+# Why: A staged skill must match at least one active_tag below to pass
+#      pre-sync validation. Without this file, every skill is accepted.
+# Usage: cp stack-context.example.yaml stack-context.yaml and edit
+# Deps: read by scripts/pre-sync-validate.sh
+# ------------------------------------------------------------------
+
+projects:
+
+  my_web_app:
+    path: ~/dev/my-web-app
+    description: Example web product (FastAPI + Postgres + React)
+    stack:
+      - python
+      - fastapi
+      - react
+      - typescript
+      - postgresql
+      - rest-api
+
+  my_data_pipeline:
+    path: ~/dev/my-data-pipeline
+    description: Example data pipeline (dbt + warehouse)
+    stack:
+      - dbt
+      - sql
+      - python
+      - data-engineering
+
+  my_hobby_project:
+    path: ~/dev/my-hobby-project
+    description: Example side project — used to bias skill selection
+    stack:
+      - python
+      - game-dev
+
+# Derived tag universe — a skill matching ANY of these passes the stack check.
+# Keep this in sync with the union of `stack` entries above.
+active_tags:
+  - python
+  - fastapi
+  - react
+  - typescript
+  - dbt
+  - sql
+  - postgresql
+  - rest-api
+  - data-engineering
+  - game-dev
