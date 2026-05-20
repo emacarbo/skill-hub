@@ -1,0 +1,14 @@
+{
+  "name": "skill-hub-agent",
+  "description": "AI agent engineering \u2014 eval, harness construction, autonomous loops, cost-aware pipelines, context budgeting",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "agent",
+    "ai-engineering",
+    "llm"
+  ]
+}

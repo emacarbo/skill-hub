@@ -1,0 +1,12 @@
+{
+  "name": "skill-hub-meta",
+  "description": "Cross-cutting helpers \u2014 brainstorming, writing, product, fullstack, devops",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "meta"
+  ]
+}

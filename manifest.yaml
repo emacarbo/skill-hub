@@ -1674,7 +1674,7 @@ skills:
   compatible_agents:
   - claude
   last_used:
-    claude: null
+    claude: '2026-05-19'
     codex: null
 - name: code-review-suite
   description: 'Consolidated skill: code review suite'

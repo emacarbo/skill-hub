@@ -1,0 +1,12 @@
+{
+  "name": "skill-hub-lifecycle",
+  "description": "Skill lifecycle management \u2014 eval, consolidate, promote, sync, discover",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "lifecycle"
+  ]
+}

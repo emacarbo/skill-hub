@@ -6,14 +6,20 @@ projects:
 
   project_pegasus:
     path: ~/dev/project_pegasus
-    description: Yu-Gi-Oh! collection management app
+    description: Yu-Gi-Oh! collection + deck management platform (FastAPI + PostgreSQL + React, Railway-deployed)
     stack:
       - python
       - fastapi
       - react
       - typescript
       - rest-api
-      - sqlite
+      - postgresql
+      - alembic
+      - tanstack-query
+      - zustand
+      - tailwind
+      - vite
+      - railway
 
   dqi_mitochondria:
     path: ~/dev/dqi-mitochondria

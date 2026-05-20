@@ -1,0 +1,12 @@
+{
+  "name": "skill-hub-patterns",
+  "description": "Backend pattern libraries \u2014 caching, feature flags, webhooks",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "patterns"
+  ]
+}

@@ -1,3 +1,75 @@
+# ------------------------------------------------------------------
+# Purpose: Exclude personal data, secrets, and local-only artifacts
+# Why: Repo is public on GitHub; nothing user-specific should leak
+# Deps: none
+# ------------------------------------------------------------------
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors / IDEs
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*~
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.coverage
+htmlcov/
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Personal Claude/Codex telemetry (local-only)
+logs/claude/*.log
+logs/claude/sessions/
+logs/claude/skills-usage.jsonl
+logs/codex/*.log
+usage.log
+
+# Claude local-only settings (machine-specific)
+.claude/settings.local.json
+.claude/cache/
+
+# Secrets / env files (keep example templates)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Backups / scratch
+*.backup
+*.backup-*
+*.bak
+*.tmp
+*.orig
+*.replaced-by-*
+
+# OS junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini

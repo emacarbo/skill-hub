@@ -7,6 +7,7 @@ from token_savior.json_annotator import annotate_json
 from token_savior.models import StructuralMetadata
 from token_savior.python_annotator import annotate_python
 from token_savior.rust_annotator import annotate_rust
+from token_savior.sql_annotator import annotate_sql
 from token_savior.text_annotator import annotate_text
 from token_savior.typescript_annotator import annotate_typescript
 
@@ -24,6 +25,7 @@ _EXTENSION_MAP: dict[str, str] = {
     ".rs": "rust",
     ".cs": "csharp",
     ".json": "json",
+    ".sql": "sql",
 }
 
 
@@ -65,5 +67,7 @@ def annotate(
         return annotate_csharp(text, source_name)
     elif file_type == "json":
         return annotate_json(text, source_name)
+    elif file_type == "sql":
+        return annotate_sql(text, source_name)
     else:
         return annotate_generic(text, source_name)

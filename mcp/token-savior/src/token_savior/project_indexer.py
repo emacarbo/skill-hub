@@ -42,6 +42,9 @@ class ProjectIndexer:
             "**/*.md",
             "**/*.txt",
             "**/*.json",
+            "**/*.sql",
+            "**/*.yml",
+            "**/*.yaml",
         ]
         self.exclude_patterns = exclude_patterns or [
             "**/__pycache__/**",
@@ -483,6 +486,8 @@ class ProjectIndexer:
             return self._resolve_go_import(module_path, all_files)
         elif ext == ".cs":
             return self._resolve_csharp_import(module_path, all_files)
+        elif ext == ".sql":
+            return self._resolve_sql_import(module_path, all_files)
 
         return None
 
@@ -668,6 +673,29 @@ class ProjectIndexer:
                 candidate = (prefix + parts[0] + '/' + parts[1] + '.cs').replace(os.sep, '/')
                 if candidate in all_files:
                     return candidate
+
+        return None
+
+    def _resolve_sql_import(
+        self, module_path: str, all_files: set[str]
+    ) -> str | None:
+        """Resolve a dbt ref() or source() to a project .sql file.
+
+        For ref('model_name'): searches for any .sql file named model_name.sql
+        under common dbt directories (models/, macros/, snapshots/).
+
+        For source.source_name (source() calls): returns None since sources
+        are external tables, not project files.
+        """
+        if not module_path or module_path.startswith("source."):
+            return None
+
+        target = module_path + ".sql"
+
+        # Search all files for a matching filename
+        for f in all_files:
+            if f.endswith("/" + target) or f == target:
+                return f
 
         return None
 

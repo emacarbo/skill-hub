@@ -1,11 +1,16 @@
 #!/bin/bash
-# Sync general_skills/ → ~/.claude/skills/
+# Sync general_skills/ → ~/.claude/skills/ AND plugin skill dirs.
 #
-# For each .md file in general_skills/, creates:
-#   ~/.claude/skills/<name>/SKILL.md → symlink to the .md file
+# For each .md file in general_skills/, deploys a FULL copy to:
+#   ~/.claude/skills/<name>/SKILL.md
+#   ~/dev/skill-hub/plugins/<plugin>/skills/<name>/SKILL.md  (if present)
 #
-# Preserves Citadel orchestration symlinks (do, marshal, archon, fleet, etc.)
-# that point to multi-file skill directories.
+# The previous stub-generation step (scripts/generate-stubs.py) was archived —
+# disk savings were negligible (~15KB/skill) and the truncated descriptions
+# hurt skill invocation. Full content lives at deployed paths now.
+#
+# Preserves Citadel orchestration directories (do, marshal, archon, fleet, etc.)
+# that have multi-file structures.
 #
 # Usage: ./sync-skills.sh [--dry-run]
 
@@ -98,18 +103,32 @@ for md_file in "$GENERAL_SKILLS"/*.md; do
     rm -rf "$target_dir"
   fi
 
-  # Generate a compact stub instead of symlinking the full file.
-  # Stubs are ~500B vs 5-30KB full files — critical for context budget.
-  # Full content is read on demand via the path in the stub.
-  mkdir -p "$target_dir"
-  python3 "$SCRIPT_DIR/generate-stubs.py" "$name" --output-dir "$SKILLS_DIR" --source-dir "$GENERAL_SKILLS" > /dev/null 2>&1
-  if [ $? -ne 0 ]; then
-    # Fallback: create symlink if stub generation fails
-    ln -s "$md_file" "$target_dir/SKILL.md"
-    echo "CREATE $name (symlink fallback — stub generation failed)"
-  else
-    echo "CREATE $name (stub)"
+  # Minimum-content check: skip files with fewer than 20 lines (likely stubs).
+  source_file="$md_file"
+  line_count=$(wc -l < "$source_file")
+  if [ "$line_count" -lt 20 ]; then
+    echo "[WARN] Skipping $name: only $line_count lines (likely a stub, minimum 20 required)"
+    continue
   fi
+
+  # Copy the full source content to the deployed SKILL.md.
+  # Full content (5-30KB/skill) is trivial disk-wise; rich descriptions and
+  # bodies give Claude better invocation signals and direct skill access.
+  mkdir -p "$target_dir"
+  if ! cp "$source_file" "$target_dir/SKILL.md"; then
+    echo "[ERROR] Copy failed for $name, skipping"
+    continue
+  fi
+  echo "CREATE $name (full)"
+
+  # Propagate the full copy to every plugin that owns this skill, so plugin
+  # consumers (not just ~/.claude/skills/) get the same canonical content.
+  for plugin_dir in "$HOME"/dev/skill-hub/plugins/*/skills/"$name"; do
+    if [ -d "$plugin_dir" ]; then
+      cp "$source_file" "$plugin_dir/SKILL.md"
+    fi
+  done
+
   created=$((created + 1))
 done
 

@@ -1,0 +1,12 @@
+{
+  "name": "skill-hub-quality",
+  "description": "Code quality, review, debugging, and pre-completion verification",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "quality"
+  ]
+}

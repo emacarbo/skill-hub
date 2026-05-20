@@ -1,0 +1,52 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "skill-hub-local",
+  "description": "Personal skill registry \u2014 split by category for per-project enablement",
+  "owner": {
+    "name": "Emanuele Carbone"
+  },
+  "plugins": [
+    {
+      "name": "skill-hub-data",
+      "source": "./plugins/skill-hub-data",
+      "description": "Data engineering specialist plugins \u2014 Python, SQL, dbt, pandas, finance reconciliation",
+      "version": "0.1.0"
+    },
+    {
+      "name": "skill-hub-quality",
+      "source": "./plugins/skill-hub-quality",
+      "description": "Code quality, review, debugging, and pre-completion verification",
+      "version": "0.1.0"
+    },
+    {
+      "name": "skill-hub-patterns",
+      "source": "./plugins/skill-hub-patterns",
+      "description": "Backend pattern libraries \u2014 caching, feature flags, webhooks",
+      "version": "0.1.0"
+    },
+    {
+      "name": "skill-hub-meta",
+      "source": "./plugins/skill-hub-meta",
+      "description": "Cross-cutting helpers \u2014 brainstorming, writing, product, fullstack, devops",
+      "version": "0.1.0"
+    },
+    {
+      "name": "skill-hub-lifecycle",
+      "source": "./plugins/skill-hub-lifecycle",
+      "description": "Skill lifecycle management \u2014 eval, consolidate, promote, sync, discover",
+      "version": "0.1.0"
+    },
+    {
+      "name": "skill-hub-tools",
+      "source": "./plugins/skill-hub-tools",
+      "description": "External tool integrations \u2014 Railway, Sentry. Per-project enablement.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "skill-hub-agent",
+      "source": "./plugins/skill-hub-agent",
+      "description": "AI agent engineering \u2014 eval, harness, autonomous loops, cost-aware LLM pipelines",
+      "version": "0.1.0"
+    }
+  ]
+}

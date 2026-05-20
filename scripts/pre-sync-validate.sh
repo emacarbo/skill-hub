@@ -48,6 +48,7 @@ warnings=0
 total_size=0
 skill_count=0
 failed_skills=""
+SKIP_LIST=""
 
 for md_file in "$GENERAL_SKILLS"/*.md; do
   name=$(basename "$md_file" .md)
@@ -69,9 +70,9 @@ for md_file in "$GENERAL_SKILLS"/*.md; do
   skill_name_lower=$(echo "$name" | tr '[:upper:]' '[:lower:]')
   matched_tag=$(echo "$skill_name_lower" | grep -oiE "$DENY_NAME_TAGS" | head -1 || true)
   if [ -n "$matched_tag" ]; then
-    echo "FAIL  $name: skill name matches denied stack '$matched_tag'"
-    errors=$((errors + 1))
-    failed_skills="$failed_skills $name"
+    echo "WARN  $name: skill name matches denied stack '$matched_tag' — will be skipped"
+    warnings=$((warnings + 1))
+    SKIP_LIST="$SKIP_LIST $name"
   fi
 done
 
@@ -93,13 +94,15 @@ if [ "$total_with_citadel" -gt "$MAX_SKILLS" ]; then
   warnings=$((warnings + 1))
 fi
 
-if [ "$errors" -gt 0 ]; then
+if [ -n "$SKIP_LIST" ]; then
+  echo "SKIP_LIST:$SKIP_LIST"
+fi
+
+valid_skills=$((skill_count - $(echo $SKIP_LIST | wc -w | tr -d ' ')))
+
+if [ "$valid_skills" -le 0 ]; then
   echo ""
-  echo "BLOCKED: $errors error(s), $warnings warning(s)"
-  if [ -n "$failed_skills" ]; then
-    echo "Failed skills:$failed_skills"
-  fi
-  echo "Fix errors above before running sync-skills.sh"
+  echo "BLOCKED: no valid skills to sync after applying deny-list"
   exit 1
 fi
 

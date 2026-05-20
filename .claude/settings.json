@@ -1,0 +1,5 @@
+{
+  "enabledPlugins": {
+    "skill-hub-lifecycle@skill-hub-local": true
+  }
+}

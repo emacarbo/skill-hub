@@ -1,0 +1,12 @@
+{
+  "name": "skill-hub-data",
+  "description": "Data engineering specialist plugins \u2014 Python, SQL, dbt, pandas, finance reconciliation",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "data"
+  ]
+}

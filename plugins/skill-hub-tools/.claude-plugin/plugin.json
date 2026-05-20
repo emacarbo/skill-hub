@@ -1,0 +1,13 @@
+{
+  "name": "skill-hub-tools",
+  "description": "External tool integrations \u2014 Railway, Sentry. Per-project enablement.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "tools",
+    "integrations"
+  ]
+}
