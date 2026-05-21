@@ -343,4 +343,20 @@ Breaking Changes: None detected
 - Error handling consistent with existing codebase patterns
 
 Verdict: REQUEST_CHANGES
+
+→ For design-level challenge (not defects), invoke `adversarial-review` next.
+  Defects are about what went wrong in the implementation; adversarial review
+  challenges whether the design itself was the right call.
 ```
+
+## Paired Skill — adversarial-review
+
+`code-review-suite` finds defects in code that was built. `adversarial-review` challenges the design decisions that *produced* the code. They are complementary and designed to fire together: when the user invokes `/review`, both skills match and the router suggests the chain.
+
+| Skill | Catches | Output |
+|-------|---------|--------|
+| `code-review-suite` (this skill) | Bugs, security holes, performance cliffs, convention drift | P0/P1/P2/P3 findings list |
+| `adversarial-review` | Unjustified design choices, hidden assumptions, most-likely-failure-point | Refined design + 3 severity-rated concerns + mitigations |
+
+For trivial PRs (single-line, lint cleanup, doc fix), invoke only this skill. For load-bearing or hard-to-reverse PRs, invoke both — defect-finding first, then design challenge against any patterns the defects reveal.
+

@@ -424,12 +424,28 @@ def main() -> None:
 
     if all_matches_ordered:
         top = all_matches_ordered[:MAX_INJECTED_SKILLS]
-        reminder = (
-            f"Skill router matched the user's prompt to: {', '.join(top)}. "
-            f"Strongly consider invoking Skill(skill=\"{top[0]}\") before "
-            f"responding if the user's intent matches the skill's purpose. "
-            f"Override if the prompt only incidentally mentions a trigger keyword."
-        )
+        if len(top) == 1:
+            reminder = (
+                f"Skill router matched the user's prompt to: {top[0]}. "
+                f"Strongly consider invoking Skill(skill=\"{top[0]}\") before "
+                f"responding if the user's intent matches the skill's purpose. "
+                f"Override if the prompt only incidentally mentions a trigger keyword."
+            )
+        else:
+            # Multiple skills matched the same prompt. They may be designed to
+            # complement each other (e.g., code-review-suite + adversarial-review
+            # both fire on /review — defect-finding paired with design-challenge).
+            # Suggest evaluating the chain, not just the top one.
+            chain = ", ".join(f"Skill(skill=\"{s}\")" for s in top)
+            reminder = (
+                f"Skill router matched the user's prompt to {len(top)} skills: "
+                f"{', '.join(top)}. These may be designed to fire as a chain — "
+                f"e.g. defect-finding paired with design-challenge, or research "
+                f"paired with planning. Evaluate whether the user's intent "
+                f"warrants invoking the full chain: {chain}. If only one "
+                f"applies, start with the most specific match. If the prompt "
+                f"only incidentally mentions a trigger keyword, override and skip."
+            )
         output = {
             "hookSpecificOutput": {
                 "hookEventName": "UserPromptSubmit",
