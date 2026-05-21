@@ -23,9 +23,11 @@ from __future__ import annotations
 
 import json
 import os
+import random
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -55,11 +57,22 @@ SKIP_IF_PROMPT_SHORTER_THAN = 12
 SKIP_PROMPTS = {
     "ok", "okay", "yes", "yeah", "yep", "no", "nope", "continue", "go",
     "stop", "cancel", "next", "done", "thanks", "thank you", "got it",
+    "proceed", "go ahead", "do it", "let's go", "sounds good",
+    "ship it", "lgtm", "looks good", "please proceed", "yes please",
+    "yes do it", "yes proceed",
 }
 
 RECURSION_GUARD_ENV = "CLAUDE_SKILL_ROUTING_ACTIVE"
 DISABLE_ENV = "SKILL_ROUTER_DISABLED"
 HAIKU_DISABLE_ENV = "SKILL_ROUTER_HAIKU_DISABLED"
+
+# Sticky re-injection: when a follow-up prompt has no signal of its own
+# (short ack like "proceed", or both routers return zero), re-inject the
+# skills that last routed in this session so the assistant keeps context.
+STICKY_DISABLE_ENV = "SKILL_ROUTER_STICKY_DISABLED"
+STICKY_TTL_SECS = int(os.environ.get("SKILL_ROUTER_STICKY_TTL_SECS", "900"))
+SESSION_STATE_DIR = HOME / ".claude" / "hooks" / "sessions"
+STICKY_PRUNE_PROBABILITY = 0.02
 
 
 # ---------------------------------------------------------------------------
@@ -129,11 +142,18 @@ def build_index() -> list[dict]:
         if isinstance(metadata, dict):
             match_modes.extend(normalize_triggers(metadata.get("match_modes")))
         match_modes = [m.lower() for m in match_modes]
+        # Per-skill sticky opt-out. Default True. Skills where wrong activation
+        # is costly (destructive ops, narrow one-shots) can set `sticky: false`.
+        sticky_raw = fm.get("sticky")
+        if sticky_raw is None and isinstance(metadata, dict):
+            sticky_raw = metadata.get("sticky")
+        sticky = False if sticky_raw is False else True
         skills.append({
             "name": name,
             "triggers": deduped,
             "description": desc,
             "match_modes": match_modes,
+            "sticky": sticky,
         })
     return skills
 
@@ -330,6 +350,157 @@ def categorize(regex_set: set[str], haiku_set: set[str]) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Sticky session state
+# ---------------------------------------------------------------------------
+
+def session_state_path(session_id: str) -> Path:
+    return SESSION_STATE_DIR / f"{session_id}.json"
+
+
+def load_session_state(session_id: str) -> dict | None:
+    """Return the saved routing for this session if it's still fresh, else None."""
+    try:
+        path = session_state_path(session_id)
+        if not path.exists():
+            return None
+        data = json.loads(path.read_text())
+        ts = float(data.get("last_routed_at") or 0)
+        if time.time() - ts > STICKY_TTL_SECS:
+            return None
+        return data
+    except Exception:
+        return None
+
+
+def save_session_state(
+    session_id: str, skills: list[str], category: str
+) -> None:
+    """Atomically write the session's last successful routing."""
+    if not session_id or not skills:
+        return
+    try:
+        SESSION_STATE_DIR.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "session_id": session_id,
+            "last_skills": skills,
+            "last_routed_at": time.time(),
+            "last_category": category,
+        }
+        # Write to a tempfile in the same dir, then atomically rename.
+        # os.replace is atomic on POSIX — readers either see the prior file
+        # or the new one, never a partial write.
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            dir=str(SESSION_STATE_DIR),
+            prefix=f".{session_id}.",
+            suffix=".tmp",
+            delete=False,
+        ) as tmp:
+            json.dump(payload, tmp)
+            tmp_path = tmp.name
+        os.replace(tmp_path, session_state_path(session_id))
+    except Exception:
+        pass
+
+
+def prune_stale_sessions() -> None:
+    """Delete session state files older than 4× TTL. Runs probabilistically."""
+    try:
+        if not SESSION_STATE_DIR.exists():
+            return
+        cutoff = time.time() - (STICKY_TTL_SECS * 4)
+        for f in SESSION_STATE_DIR.glob("*.json"):
+            try:
+                if f.stat().st_mtime < cutoff:
+                    f.unlink()
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+
+def sticky_reinject(
+    session_id: str | None, known_names: set[str]
+) -> list[str]:
+    """Return prior session skills that are still valid in the live index.
+
+    Empty list means: no sticky available. Filters against `known_names`
+    so renamed/deleted skills don't get injected.
+    """
+    if not session_id:
+        return []
+    if os.environ.get(STICKY_DISABLE_ENV) == "1":
+        return []
+    state = load_session_state(session_id)
+    if not state:
+        return []
+    last_skills = state.get("last_skills") or []
+    return [s for s in last_skills if s in known_names]
+
+
+# ---------------------------------------------------------------------------
+# Reminder construction
+# ---------------------------------------------------------------------------
+
+def build_reminder(top: list[str], source: str = "router") -> str:
+    """Compose the additionalContext string for injection.
+
+    `source="router"` uses the fresh-match phrasing.
+    `source="sticky"` makes it explicit that context is carried over.
+    """
+    prefix = ""
+    if source == "sticky":
+        prefix = (
+            "Continuing from earlier routing in this session. The user's "
+            "current prompt is short/empty of new signal — the assistant "
+            "should treat it as a follow-up to the prior topic. "
+        )
+
+    if len(top) == 1:
+        return (
+            f"{prefix}Skill router matched the user's prompt to: {top[0]}. "
+            f"Strongly consider invoking Skill(skill=\"{top[0]}\") before "
+            f"responding if the user's intent matches the skill's purpose. "
+            f"Override if the prompt only incidentally mentions a trigger keyword."
+        )
+
+    # Multiple skills matched the same prompt. They may be designed to
+    # complement each other (e.g., code-review-suite + adversarial-review
+    # both fire on /review — defect-finding paired with design-challenge).
+    # Suggest evaluating the chain, not just the top one.
+    chain = ", ".join(f"Skill(skill=\"{s}\")" for s in top)
+    return (
+        f"{prefix}Skill router matched the user's prompt to {len(top)} skills: "
+        f"{', '.join(top)}. These may be designed to fire as a chain — "
+        f"e.g. defect-finding paired with design-challenge, or research "
+        f"paired with planning. Evaluate whether the user's intent "
+        f"warrants invoking the full chain: {chain}. If only one "
+        f"applies, start with the most specific match. If the prompt "
+        f"only incidentally mentions a trigger keyword, override and skip."
+    )
+
+
+def emit_injection(skills: list[str]) -> None:
+    """Print the hookSpecificOutput JSON Claude Code expects."""
+    output = {
+        "hookSpecificOutput": {
+            "hookEventName": "UserPromptSubmit",
+            "additionalContext": build_reminder(skills, source="sticky"),
+        }
+    }
+    print(json.dumps(output))
+
+
+def write_log_entry(entry: dict) -> None:
+    try:
+        LOG_DIR.mkdir(parents=True, exist_ok=True)
+        with open(LOG_FILE, "a") as f:
+            f.write(json.dumps(entry) + "\n")
+    except Exception:
+        pass
+
+
+# ---------------------------------------------------------------------------
 # Skip conditions
 # ---------------------------------------------------------------------------
 
@@ -365,6 +536,11 @@ def main() -> None:
         sys.exit(0)
     prompt = hook_input.get("prompt") or ""
     cwd = hook_input.get("cwd") or None
+    session_id = hook_input.get("session_id") or None
+
+    # Probabilistic housekeeping: keep the sessions/ dir from growing unbounded.
+    if random.random() < STICKY_PRUNE_PROBABILITY:
+        prune_stale_sessions()
 
     skip_reason = should_skip(prompt)
     if skip_reason:
@@ -372,20 +548,38 @@ def main() -> None:
         # prompts (useful for plan-adherence analysis: did the plan call for
         # /X and did the user actually run it?). Other skip reasons stay silent.
         if skip_reason == "slash-command":
-            try:
-                LOG_DIR.mkdir(parents=True, exist_ok=True)
-                entry = {
-                    "ts": time.time(),
-                    "prompt": prompt[:PROMPT_PREVIEW_MAX],
-                    "cwd": cwd,
-                    "regex_matches": [],
-                    "haiku_matches": [],
-                    "category": "slash-command",
-                }
-                with open(LOG_FILE, "a") as f:
-                    f.write(json.dumps(entry) + "\n")
-            except Exception:
-                pass
+            write_log_entry({
+                "ts": time.time(),
+                "prompt": prompt[:PROMPT_PREVIEW_MAX],
+                "cwd": cwd,
+                "regex_matches": [],
+                "haiku_matches": [],
+                "category": "slash-command",
+            })
+            sys.exit(0)
+
+        # Sticky re-injection: when the prompt would have produced no
+        # injection today (ack-word or too-short), reuse the session's
+        # last successful routing if it's still fresh. Strictly additive:
+        # the original silent-exit path is preserved when there's no state.
+        if skip_reason in {"ack-word", "too-short"} and session_id:
+            skills_index = load_index()
+            if skills_index:
+                known_names = {s["name"] for s in skills_index}
+                sticky_skills = sticky_reinject(session_id, known_names)
+                if sticky_skills:
+                    top = sticky_skills[:MAX_INJECTED_SKILLS]
+                    emit_injection(top)
+                    write_log_entry({
+                        "ts": time.time(),
+                        "prompt": prompt[:PROMPT_PREVIEW_MAX],
+                        "cwd": cwd,
+                        "regex_matches": [],
+                        "haiku_matches": [],
+                        "category": "sticky-ack",
+                        "sticky_used": True,
+                        "sticky_skills": top,
+                    })
         sys.exit(0)
 
     skills = load_index()
@@ -406,46 +600,39 @@ def main() -> None:
     regex_set = set(regex_matches)
     haiku_set = set(haiku_matches)
     all_matches_ordered = list(dict.fromkeys(regex_matches + haiku_matches))
+    category = categorize(regex_set, haiku_set)
 
-    log_entry = {
+    # Sticky fallback: fresh routing produced nothing, but we have a recent
+    # routing for this session. Inject that instead of staying silent.
+    if not all_matches_ordered and session_id:
+        sticky_skills = sticky_reinject(session_id, known_names)
+        if sticky_skills:
+            top = sticky_skills[:MAX_INJECTED_SKILLS]
+            emit_injection(top)
+            write_log_entry({
+                "ts": time.time(),
+                "prompt": prompt[:PROMPT_PREVIEW_MAX],
+                "cwd": cwd,
+                "regex_matches": [],
+                "haiku_matches": [],
+                "category": "sticky-fallback",
+                "sticky_used": True,
+                "sticky_skills": top,
+            })
+            sys.exit(0)
+
+    write_log_entry({
         "ts": time.time(),
         "prompt": prompt[:PROMPT_PREVIEW_MAX],
         "cwd": cwd,
         "regex_matches": sorted(regex_set),
         "haiku_matches": sorted(haiku_set),
-        "category": categorize(regex_set, haiku_set),
-    }
-    try:
-        LOG_DIR.mkdir(parents=True, exist_ok=True)
-        with open(LOG_FILE, "a") as f:
-            f.write(json.dumps(log_entry) + "\n")
-    except Exception:
-        pass
+        "category": category,
+    })
 
     if all_matches_ordered:
         top = all_matches_ordered[:MAX_INJECTED_SKILLS]
-        if len(top) == 1:
-            reminder = (
-                f"Skill router matched the user's prompt to: {top[0]}. "
-                f"Strongly consider invoking Skill(skill=\"{top[0]}\") before "
-                f"responding if the user's intent matches the skill's purpose. "
-                f"Override if the prompt only incidentally mentions a trigger keyword."
-            )
-        else:
-            # Multiple skills matched the same prompt. They may be designed to
-            # complement each other (e.g., code-review-suite + adversarial-review
-            # both fire on /review — defect-finding paired with design-challenge).
-            # Suggest evaluating the chain, not just the top one.
-            chain = ", ".join(f"Skill(skill=\"{s}\")" for s in top)
-            reminder = (
-                f"Skill router matched the user's prompt to {len(top)} skills: "
-                f"{', '.join(top)}. These may be designed to fire as a chain — "
-                f"e.g. defect-finding paired with design-challenge, or research "
-                f"paired with planning. Evaluate whether the user's intent "
-                f"warrants invoking the full chain: {chain}. If only one "
-                f"applies, start with the most specific match. If the prompt "
-                f"only incidentally mentions a trigger keyword, override and skip."
-            )
+        reminder = build_reminder(top, source="router")
         output = {
             "hookSpecificOutput": {
                 "hookEventName": "UserPromptSubmit",
@@ -453,6 +640,15 @@ def main() -> None:
             }
         }
         print(json.dumps(output))
+
+        # Persist this routing so a follow-up ack-word / both-empty prompt
+        # in the same session can re-inject. Filter out skills with
+        # `sticky: false` in their frontmatter (default is true).
+        if session_id:
+            sticky_set = {s["name"] for s in skills if s.get("sticky", True)}
+            sticky_top = [s for s in top if s in sticky_set]
+            if sticky_top:
+                save_session_state(session_id, sticky_top, category)
 
     sys.exit(0)
 

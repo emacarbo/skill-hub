@@ -1,0 +1,17 @@
+{
+  "name": "skill-hub-marketing-agency",
+  "description": "Copywriting and graphics skills — SEO, humanized prose, UI/UX, brand, accessibility",
+  "version": "0.1.0",
+  "author": {
+    "name": "Emanuele Carbone"
+  },
+  "keywords": [
+    "skill-hub",
+    "marketing",
+    "seo",
+    "copywriting",
+    "design",
+    "ux",
+    "accessibility"
+  ]
+}
