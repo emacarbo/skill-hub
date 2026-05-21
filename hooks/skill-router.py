@@ -17,6 +17,13 @@ Why: descriptions alone don't trigger reliably across 80+ skills. This
 hook makes invocation deterministic-first, fuzzy-fallback.
 
 Deps: PyYAML (already installed), local `claude` CLI binary.
+
+Sticky re-injection depends on `session_id` being present in the
+UserPromptSubmit hook payload. If Claude Code ever omits this field
+(version drift, alternate hook variants, replay tooling), sticky
+silently degrades to off — the original stateless behavior. Look for
+`hook_input.get("session_id")` to confirm the dependency at the
+extraction point.
 """
 
 from __future__ import annotations
@@ -72,7 +79,9 @@ HAIKU_DISABLE_ENV = "SKILL_ROUTER_HAIKU_DISABLED"
 STICKY_DISABLE_ENV = "SKILL_ROUTER_STICKY_DISABLED"
 STICKY_TTL_SECS = int(os.environ.get("SKILL_ROUTER_STICKY_TTL_SECS", "900"))
 SESSION_STATE_DIR = HOME / ".claude" / "hooks" / "sessions"
-STICKY_PRUNE_PROBABILITY = 0.02
+STICKY_PRUNE_PROBABILITY = float(
+    os.environ.get("SKILL_ROUTER_STICKY_PRUNE_PROBABILITY", "0.02")
+)
 
 
 # ---------------------------------------------------------------------------
@@ -480,8 +489,12 @@ def build_reminder(top: list[str], source: str = "router") -> str:
     )
 
 
-def emit_injection(skills: list[str]) -> None:
-    """Print the hookSpecificOutput JSON Claude Code expects."""
+def emit_sticky_injection(skills: list[str]) -> None:
+    """Print the hookSpecificOutput JSON for a sticky (carried-over) routing.
+
+    Named explicitly so future callers don't accidentally use this for
+    fresh router matches — the reminder text is sticky-specific.
+    """
     output = {
         "hookSpecificOutput": {
             "hookEventName": "UserPromptSubmit",
@@ -517,10 +530,14 @@ def should_skip(prompt: str) -> str | None:
     # to log them as slash-command for observability.
     if stripped.startswith("/"):
         return "slash-command"
-    if len(stripped) < SKIP_IF_PROMPT_SHORTER_THAN:
-        return "too-short"
+    # Ack-word check must come BEFORE too-short: most acks ("proceed", "lgtm",
+    # "do it") are under 12 chars, so the length check would mis-categorize
+    # them as too-short. Reversing the order surfaces vocabulary-driven sticky
+    # vs length-driven sticky distinctly in the log.
     if stripped.lower() in SKIP_PROMPTS:
         return "ack-word"
+    if len(stripped) < SKIP_IF_PROMPT_SHORTER_THAN:
+        return "too-short"
     return None
 
 
@@ -569,14 +586,22 @@ def main() -> None:
                 sticky_skills = sticky_reinject(session_id, known_names)
                 if sticky_skills:
                     top = sticky_skills[:MAX_INJECTED_SKILLS]
-                    emit_injection(top)
+                    emit_sticky_injection(top)
+                    # Distinguish vocabulary-driven sticky from length-driven
+                    # sticky in the log — helps diagnose "why does sticky
+                    # fire so much" without re-deriving from the prompt.
+                    sticky_category = (
+                        "sticky-ack-word"
+                        if skip_reason == "ack-word"
+                        else "sticky-too-short"
+                    )
                     write_log_entry({
                         "ts": time.time(),
                         "prompt": prompt[:PROMPT_PREVIEW_MAX],
                         "cwd": cwd,
                         "regex_matches": [],
                         "haiku_matches": [],
-                        "category": "sticky-ack",
+                        "category": sticky_category,
                         "sticky_used": True,
                         "sticky_skills": top,
                     })
@@ -608,7 +633,7 @@ def main() -> None:
         sticky_skills = sticky_reinject(session_id, known_names)
         if sticky_skills:
             top = sticky_skills[:MAX_INJECTED_SKILLS]
-            emit_injection(top)
+            emit_sticky_injection(top)
             write_log_entry({
                 "ts": time.time(),
                 "prompt": prompt[:PROMPT_PREVIEW_MAX],
